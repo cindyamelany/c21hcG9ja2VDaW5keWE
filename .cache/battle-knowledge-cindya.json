@@ -46,7 +46,7 @@
       "summonCostSource": "observed",
       "remainingHp": 80,
       "remainingHpSource": "server-attack-observation",
-      "remainingHpObservedAt": "2026-10-10T12:27:50.116Z",
+      "remainingHpObservedAt": "2026-10-11T09:55:30.618Z",
       "hp": 80,
       "maxHp": 80,
       "hpSource": "server-attack-snapshot",
@@ -66,11 +66,11 @@
       "skillEffectSource": "catalog",
       "catalogHp": 50,
       "catalogHpSource": "catalog",
-      "remainingHp": 30,
+      "remainingHp": 50,
       "remainingHpSource": "server-attack-observation",
-      "remainingHpObservedAt": "2026-10-10T12:21:37.218Z",
-      "hp": 30,
-      "maxHp": 30,
+      "remainingHpObservedAt": "2026-10-11T10:28:19.146Z",
+      "hp": 50,
+      "maxHp": 50,
       "hpSource": "server-attack-snapshot",
       "maxHpSource": "server-attack-snapshot",
       "legacyHpAmbiguous": false,
@@ -92,14 +92,20 @@
       "summonCostSource": "observed",
       "canAttackImmediately": true,
       "canAttackSource": "observed-rush",
-      "remainingHp": 100,
+      "remainingHp": 80,
       "remainingHpSource": "server-attack-observation",
-      "remainingHpObservedAt": "2026-10-10T12:27:16.460Z",
-      "hp": 100,
-      "maxHp": 100,
+      "remainingHpObservedAt": "2026-10-11T10:00:35.066Z",
+      "hp": 80,
+      "maxHp": 80,
       "hpSource": "server-attack-snapshot",
       "maxHpSource": "server-attack-snapshot",
-      "legacyHpAmbiguous": false
+      "legacyHpAmbiguous": false,
+      "hpConflict": {
+        "catalog": 100,
+        "observed": 80,
+        "observedSource": "server-attack-snapshot"
+      },
+      "hpConflictSource": "catalog-vs-observed"
     },
     "SLC-013": {
       "ruleText": "When the opponent attacks this card, that attack gets skill damage -20.",
@@ -115,7 +121,9 @@
       "maxHp": 100,
       "hpSource": "server-attack-snapshot",
       "maxHpSource": "server-attack-snapshot",
-      "legacyHpAmbiguous": false
+      "legacyHpAmbiguous": false,
+      "canAttackImmediately": true,
+      "canAttackSource": "observed-rush"
     },
     "SLC-003": {
       "ruleText": "When the opponent attacks this card, that attack gets skill damage -20.",
@@ -124,11 +132,11 @@
       "catalogHpSource": "catalog",
       "summonCost": 2,
       "summonCostSource": "observed",
-      "remainingHp": 120,
+      "remainingHp": 100,
       "remainingHpSource": "server-attack-observation",
-      "remainingHpObservedAt": "2026-10-10T11:33:26.865Z",
-      "hp": 120,
-      "maxHp": 120,
+      "remainingHpObservedAt": "2026-10-11T09:51:26.060Z",
+      "hp": 100,
+      "maxHp": 100,
       "hpSource": "server-attack-snapshot",
       "maxHpSource": "server-attack-snapshot",
       "legacyHpAmbiguous": false,
@@ -179,7 +187,7 @@
       "canAttackSource": "observed-rush",
       "remainingHp": 50,
       "remainingHpSource": "server-attack-observation",
-      "remainingHpObservedAt": "2026-10-10T12:18:18.038Z",
+      "remainingHpObservedAt": "2026-10-11T10:40:48.325Z",
       "hp": 50,
       "maxHp": 50,
       "hpSource": "server-attack-snapshot",
@@ -196,7 +204,23 @@
       "ruleText": "if you have fewer Walls than the opponent, this card gets HP+20.",
       "ruleTextSource": "catalog",
       "catalogHp": 100,
-      "catalogHpSource": "catalog"
+      "catalogHpSource": "catalog",
+      "summonCost": 1,
+      "summonCostSource": "observed",
+      "learnedEffects": {
+        "hp": {
+          "our-wall-fewer": {
+            "value": 20,
+            "samples": 2,
+            "conflicts": 0,
+            "source": "passive",
+            "at": "2026-10-11T09:58:07.642Z",
+            "lastSeenAt": "2026-10-11T10:37:47.293Z"
+          }
+        }
+      },
+      "selfHpBonus": 20,
+      "selfHpBonusSource": "passive"
     },
     "BS-013": {
       "catalogHp": 50,
@@ -221,11 +245,11 @@
         "skillDamage": {
           "no-other-brand:brand=Black AMATO": {
             "value": 20,
-            "samples": 42,
+            "samples": 51,
             "conflicts": 0,
             "source": "passive",
             "at": "2026-10-10T03:00:46.720Z",
-            "lastSeenAt": "2026-10-10T12:15:27.326Z"
+            "lastSeenAt": "2026-10-11T10:38:56.670Z"
           }
         }
       },
@@ -260,14 +284,8 @@
       },
       "hpConflictSource": "catalog-vs-observed"
     },
-    "STB-003": {
-      "summonCost": 1,
-      "summonCostSource": "trainer-log"
-    },
-    "PB-116": {
-      "summonCost": 1,
-      "summonCostSource": "trainer-log"
-    },
+    "STB-003": {},
+    "PB-116": {},
     "HLC-003": {
       "ruleText": "if you have fewer Walls than the opponent, this card gets HP+20.",
       "ruleTextSource": "catalog",
@@ -337,10 +355,7 @@
       },
       "hpConflictSource": "catalog-vs-observed"
     },
-    "PB-110": {
-      "summonCost": 1,
-      "summonCostSource": "trainer-log"
-    },
+    "PB-110": {},
     "SLC-012": {
       "skillEffect": "the target character gets HP-20 before damage is dealt.",
       "skillEffectSource": "catalog",
@@ -395,21 +410,15 @@
       "canAttackSource": "observed-rush",
       "remainingHp": 70,
       "remainingHpSource": "server-attack-observation",
-      "remainingHpObservedAt": "2026-10-10T12:16:24.693Z",
+      "remainingHpObservedAt": "2026-10-11T10:29:03.020Z",
       "hp": 70,
       "maxHp": 70,
       "hpSource": "server-attack-snapshot",
       "maxHpSource": "server-attack-snapshot",
       "legacyHpAmbiguous": false
     },
-    "PB-132": {
-      "summonCost": 1,
-      "summonCostSource": "trainer-log"
-    },
-    "BS-061": {
-      "summonCost": 2,
-      "summonCostSource": "trainer-log"
-    },
+    "PB-132": {},
+    "BS-061": {},
     "BS-002": {
       "skillEffect": "the target character gets HP-20 before damage is dealt.",
       "skillEffectSource": "catalog",
@@ -433,11 +442,11 @@
       "catalogHpSource": "catalog",
       "summonCost": 1,
       "summonCostSource": "observed",
-      "remainingHp": 60,
+      "remainingHp": 40,
       "remainingHpSource": "server-attack-observation",
-      "remainingHpObservedAt": "2026-10-10T11:59:43.978Z",
-      "hp": 60,
-      "maxHp": 60,
+      "remainingHpObservedAt": "2026-10-11T10:21:13.295Z",
+      "hp": 40,
+      "maxHp": 40,
       "hpSource": "server-attack-snapshot",
       "maxHpSource": "server-attack-snapshot",
       "legacyHpAmbiguous": false,
@@ -529,11 +538,11 @@
       "catalogHpSource": "catalog",
       "summonCost": 1,
       "summonCostSource": "observed",
-      "remainingHp": 70,
+      "remainingHp": 90,
       "remainingHpSource": "server-attack-observation",
-      "remainingHpObservedAt": "2026-10-10T12:27:04.811Z",
-      "hp": 70,
-      "maxHp": 70,
+      "remainingHpObservedAt": "2026-10-11T10:38:00.731Z",
+      "hp": 90,
+      "maxHp": 90,
       "hpSource": "server-attack-snapshot",
       "maxHpSource": "server-attack-snapshot",
       "legacyHpAmbiguous": false,
@@ -573,11 +582,11 @@
         "skillDamage": {
           "base": {
             "value": 20,
-            "samples": 4,
+            "samples": 5,
             "conflicts": 0,
             "source": "passive",
             "at": "2026-10-10T03:33:30.914Z",
-            "lastSeenAt": "2026-10-10T11:38:43.678Z"
+            "lastSeenAt": "2026-10-11T10:29:36.033Z"
           }
         }
       },
@@ -611,7 +620,7 @@
       "canAttackSource": "observed-rush",
       "remainingHp": 90,
       "remainingHpSource": "server-attack-observation",
-      "remainingHpObservedAt": "2026-10-10T12:13:17.176Z",
+      "remainingHpObservedAt": "2026-10-11T10:15:21.195Z",
       "hp": 90,
       "maxHp": 90,
       "hpSource": "server-attack-snapshot",
@@ -619,12 +628,15 @@
       "legacyHpAmbiguous": false,
       "hpConflict": {
         "catalog": 90,
-        "observed": 110,
+        "observed": 70,
         "observedSource": "server-attack-snapshot"
       },
       "hpConflictSource": "catalog-vs-observed"
     },
-    "PB-133": {},
+    "PB-133": {
+      "summonCost": 1,
+      "summonCostSource": "trainer-log"
+    },
     "HLC-002": {
       "ruleText": "On play: another friendly character gets skill damage +20 on its next attack this turn.",
       "ruleTextSource": "catalog",
@@ -657,10 +669,7 @@
       },
       "hpConflictSource": "catalog-vs-observed"
     },
-    "STB-008": {
-      "summonCost": 1,
-      "summonCostSource": "trainer-log"
-    },
+    "STB-008": {},
     "BS-085": {},
     "HLC-001": {
       "ruleText": "On play: another friendly character gets HP+20 until the next attack it receives.",
@@ -830,12 +839,12 @@
         "direct": false,
         "observedValid": true,
         "observedOpponent": true,
-        "lastObservedAt": "2026-10-10T11:04:53.934Z",
+        "lastObservedAt": "2026-10-11T10:26:27.065Z",
         "damageHistory": [
           130,
           110
         ],
-        "observationCount": 10,
+        "observationCount": 13,
         "namesSeen": [
           "Solar Storm"
         ],
@@ -851,12 +860,12 @@
         "direct": false,
         "observedValid": true,
         "observedOpponent": true,
-        "lastObservedAt": "2026-10-10T12:21:03.732Z",
+        "lastObservedAt": "2026-10-11T10:27:46.734Z",
         "damageHistory": [
           80,
           100
         ],
-        "observationCount": 34,
+        "observationCount": 42,
         "namesSeen": [
           "Flare"
         ],
@@ -889,15 +898,15 @@
       "0": {
         "name": "Ember Wave",
         "damage": 80,
-        "targetHp": 60,
+        "targetHp": 50,
         "direct": false,
         "observedValid": true,
-        "lastObservedAt": "2026-10-10T11:42:30.860Z",
+        "lastObservedAt": "2026-10-11T10:19:55.545Z",
         "damageHistory": [
           80,
           60
         ],
-        "observationCount": 30,
+        "observationCount": 37,
         "namesSeen": [
           "Ember Wave"
         ],
@@ -910,15 +919,15 @@
       "0": {
         "name": "Dark Wave",
         "damage": 70,
-        "targetHp": 0,
-        "direct": true,
+        "targetHp": 50,
+        "direct": false,
         "observedValid": true,
-        "lastObservedAt": "2026-10-10T12:20:42.361Z",
+        "lastObservedAt": "2026-10-11T10:10:26.821Z",
         "damageHistory": [
           70,
           50
         ],
-        "observationCount": 36,
+        "observationCount": 39,
         "namesSeen": [
           "Dark Wave"
         ],
@@ -931,14 +940,14 @@
       "0": {
         "name": "Sunburst",
         "damage": 80,
-        "direct": true,
+        "direct": false,
         "observedValid": true,
         "observedOpponent": true,
-        "lastObservedAt": "2026-10-10T12:17:22.487Z",
+        "lastObservedAt": "2026-10-11T10:41:11.525Z",
         "damageHistory": [
           80
         ],
-        "observationCount": 29,
+        "observationCount": 43,
         "namesSeen": [
           "Sunburst"
         ],
@@ -954,13 +963,13 @@
         "direct": false,
         "observedValid": true,
         "observedOpponent": true,
-        "lastObservedAt": "2026-10-10T10:47:28.126Z",
+        "lastObservedAt": "2026-10-11T10:27:02.547Z",
         "damageHistory": [
           130,
           110,
           150
         ],
-        "observationCount": 4,
+        "observationCount": 7,
         "namesSeen": [
           "Sun Rush"
         ],
@@ -976,12 +985,12 @@
         "targetHp": 90,
         "direct": false,
         "observedValid": true,
-        "lastObservedAt": "2026-10-10T12:26:18.033Z",
+        "lastObservedAt": "2026-10-11T10:35:59.155Z",
         "damageHistory": [
           20,
           0
         ],
-        "observationCount": 14,
+        "observationCount": 17,
         "namesSeen": [
           "Crystal Toss"
         ]
@@ -994,11 +1003,12 @@
         "direct": false,
         "observedValid": true,
         "observedOpponent": true,
-        "lastObservedAt": "2026-10-10T12:15:50.599Z",
+        "lastObservedAt": "2026-10-11T10:28:30.028Z",
         "damageHistory": [
-          90
+          90,
+          110
         ],
-        "observationCount": 3,
+        "observationCount": 8,
         "namesSeen": [
           "Fire Spin"
         ],
@@ -1014,12 +1024,12 @@
         "targetHp": 90,
         "direct": false,
         "observedValid": true,
-        "lastObservedAt": "2026-10-10T12:23:17.980Z",
+        "lastObservedAt": "2026-10-11T10:33:43.761Z",
         "damageHistory": [
           70,
           50
         ],
-        "observationCount": 32,
+        "observationCount": 36,
         "namesSeen": [
           "Dark Wave"
         ],
@@ -1035,12 +1045,12 @@
         "direct": false,
         "observedValid": true,
         "observedOpponent": true,
-        "lastObservedAt": "2026-10-10T12:21:37.218Z",
+        "lastObservedAt": "2026-10-11T10:24:58.917Z",
         "damageHistory": [
           50,
           30
         ],
-        "observationCount": 21,
+        "observationCount": 24,
         "namesSeen": [
           "Goo Burst"
         ],
@@ -1053,16 +1063,16 @@
     "CRA-002": {
       "0": {
         "name": "Cinder Burst",
-        "damage": 80,
-        "targetHp": 90,
+        "damage": 100,
+        "targetHp": 50,
         "direct": false,
         "observedValid": true,
-        "lastObservedAt": "2026-10-10T12:23:40.045Z",
+        "lastObservedAt": "2026-10-11T10:40:48.325Z",
         "damageHistory": [
           100,
           80
         ],
-        "observationCount": 31,
+        "observationCount": 35,
         "namesSeen": [
           "Cinder Burst"
         ],
@@ -1078,18 +1088,19 @@
         "targetHp": 0,
         "direct": true,
         "observedValid": true,
-        "lastObservedAt": "2026-10-10T12:13:28.348Z",
+        "lastObservedAt": "2026-10-11T10:39:51.403Z",
         "damageHistory": [
           40,
           20
         ],
-        "observationCount": 11,
+        "observationCount": 16,
         "namesSeen": [
           "Gel Toss"
         ],
         "catalogSkillIndex": 0,
         "identitySource": "server-name",
-        "identityConfidence": 1
+        "identityConfidence": 1,
+        "observedOpponent": true
       }
     },
     "AMC-010": {
@@ -1120,11 +1131,11 @@
         "direct": true,
         "observedValid": true,
         "observedOpponent": true,
-        "lastObservedAt": "2026-10-10T11:59:10.880Z",
+        "lastObservedAt": "2026-10-11T10:20:40.191Z",
         "damageHistory": [
           70
         ],
-        "observationCount": 7,
+        "observationCount": 9,
         "namesSeen": [
           "Heat Puff"
         ],
@@ -1137,16 +1148,16 @@
       "0": {
         "name": "Void Slice",
         "damage": 90,
-        "targetHp": 50,
-        "direct": false,
+        "targetHp": 0,
+        "direct": true,
         "observedValid": true,
-        "lastObservedAt": "2026-10-10T12:15:38.852Z",
+        "lastObservedAt": "2026-10-11T10:40:02.274Z",
         "damageHistory": [
           90,
           50,
           70
         ],
-        "observationCount": 33,
+        "observationCount": 46,
         "namesSeen": [
           "Void Slice"
         ],
@@ -1158,16 +1169,17 @@
     "HLC-F02": {
       "0": {
         "name": "Scorch",
-        "damage": 30,
-        "targetHp": 50,
+        "damage": 10,
+        "targetHp": 90,
         "direct": false,
         "observedValid": true,
-        "lastObservedAt": "2026-10-10T12:17:11.727Z",
+        "lastObservedAt": "2026-10-11T10:04:09.625Z",
         "damageHistory": [
           30,
-          50
+          50,
+          10
         ],
-        "observationCount": 35,
+        "observationCount": 39,
         "namesSeen": [
           "Scorch"
         ],
@@ -1183,11 +1195,11 @@
         "direct": false,
         "observedValid": true,
         "observedOpponent": true,
-        "lastObservedAt": "2026-10-10T12:07:45.523Z",
+        "lastObservedAt": "2026-10-11T10:33:54.863Z",
         "damageHistory": [
           50
         ],
-        "observationCount": 18,
+        "observationCount": 22,
         "namesSeen": [
           "Foam Spray"
         ],
@@ -1243,12 +1255,12 @@
         "direct": false,
         "observedValid": true,
         "observedOpponent": true,
-        "lastObservedAt": "2026-10-10T11:38:43.678Z",
+        "lastObservedAt": "2026-10-11T10:29:36.033Z",
         "damageHistory": [
           140,
           120
         ],
-        "observationCount": 5,
+        "observationCount": 6,
         "namesSeen": [
           "Supernova"
         ],
@@ -1260,16 +1272,16 @@
     "WAM-001": {
       "0": {
         "name": "Snow Puff",
-        "damage": 20,
-        "targetHp": 120,
+        "damage": 40,
+        "targetHp": 90,
         "direct": false,
         "observedValid": true,
-        "lastObservedAt": "2026-10-10T11:31:27.113Z",
+        "lastObservedAt": "2026-10-11T10:15:21.195Z",
         "damageHistory": [
           40,
           20
         ],
-        "observationCount": 18,
+        "observationCount": 20,
         "namesSeen": [
           "Snow Puff"
         ],
@@ -1285,12 +1297,12 @@
         "targetHp": 90,
         "direct": false,
         "observedValid": true,
-        "lastObservedAt": "2026-10-10T12:25:54.313Z",
+        "lastObservedAt": "2026-10-11T10:38:00.731Z",
         "damageHistory": [
           20,
           0
         ],
-        "observationCount": 16,
+        "observationCount": 20,
         "namesSeen": [
           "Splat"
         ],
@@ -1307,11 +1319,11 @@
         "direct": false,
         "observedValid": true,
         "observedOpponent": true,
-        "lastObservedAt": "2026-10-10T03:44:44.871Z",
+        "lastObservedAt": "2026-10-11T10:15:54.179Z",
         "damageHistory": [
           50
         ],
-        "observationCount": 2,
+        "observationCount": 5,
         "namesSeen": [
           "Splosh"
         ],
@@ -1343,16 +1355,16 @@
     "SLC-011": {
       "0": {
         "name": "Squish",
-        "damage": 0,
+        "damage": 20,
         "targetHp": 110,
-        "direct": false,
+        "direct": true,
         "observedValid": true,
-        "lastObservedAt": "2026-10-10T11:47:31.043Z",
+        "lastObservedAt": "2026-10-11T09:57:45.006Z",
         "damageHistory": [
           0,
           20
         ],
-        "observationCount": 16,
+        "observationCount": 18,
         "namesSeen": [
           "Squish"
         ],
@@ -1365,16 +1377,16 @@
     "HLC-003": {
       "0": {
         "name": "Halo Beam",
-        "damage": 70,
+        "damage": 50,
         "direct": false,
         "observedValid": true,
         "observedOpponent": true,
-        "lastObservedAt": "2026-10-10T11:54:38.949Z",
+        "lastObservedAt": "2026-10-11T10:24:03.394Z",
         "damageHistory": [
           50,
           70
         ],
-        "observationCount": 6,
+        "observationCount": 8,
         "namesSeen": [
           "Halo Beam"
         ],
@@ -1387,15 +1399,15 @@
       "0": {
         "name": "Sticky Slap",
         "damage": 40,
-        "targetHp": 100,
+        "targetHp": 50,
         "direct": false,
         "observedValid": true,
-        "lastObservedAt": "2026-10-10T12:27:16.460Z",
+        "lastObservedAt": "2026-10-11T10:19:10.998Z",
         "damageHistory": [
           40,
           20
         ],
-        "observationCount": 17,
+        "observationCount": 19,
         "namesSeen": [
           "Sticky Slap"
         ],
@@ -1408,16 +1420,16 @@
     "HLC-001": {
       "0": {
         "name": "Blessing",
-        "damage": 70,
+        "damage": 50,
         "direct": false,
         "observedValid": true,
         "observedOpponent": true,
-        "lastObservedAt": "2026-10-10T04:48:37.424Z",
+        "lastObservedAt": "2026-10-11T10:24:03.394Z",
         "damageHistory": [
           50,
           70
         ],
-        "observationCount": 4,
+        "observationCount": 5,
         "namesSeen": [
           "Blessing"
         ],
@@ -1430,15 +1442,15 @@
       "0": {
         "name": "Shadow Rend",
         "damage": 80,
-        "targetHp": 80,
+        "targetHp": 90,
         "direct": false,
         "observedValid": true,
-        "lastObservedAt": "2026-10-10T12:27:50.116Z",
+        "lastObservedAt": "2026-10-11T10:32:34.088Z",
         "damageHistory": [
           80,
           60
         ],
-        "observationCount": 29,
+        "observationCount": 41,
         "namesSeen": [
           "Shadow Rend"
         ],
@@ -1592,15 +1604,17 @@
     "AMC-005": {
       "0": {
         "name": "Sunflare",
-        "damage": 120,
+        "damage": 100,
         "direct": false,
         "observedValid": true,
         "observedOpponent": true,
-        "lastObservedAt": "2026-10-10T10:00:56.028Z",
+        "lastObservedAt": "2026-10-11T10:07:05.715Z",
         "damageHistory": [
-          120
+          120,
+          140,
+          100
         ],
-        "observationCount": 1,
+        "observationCount": 3,
         "namesSeen": [
           "Sunflare"
         ],
@@ -1630,14 +1644,14 @@
       "0": {
         "name": "Splash",
         "damage": 40,
-        "direct": false,
+        "direct": true,
         "observedValid": true,
         "observedOpponent": true,
-        "lastObservedAt": "2026-10-10T12:08:52.025Z",
+        "lastObservedAt": "2026-10-11T10:15:54.179Z",
         "damageHistory": [
           40
         ],
-        "observationCount": 3,
+        "observationCount": 6,
         "namesSeen": [
           "Splash"
         ],
@@ -1660,6 +1674,46 @@
         "observationCount": 1,
         "namesSeen": [
           "Corrosion"
+        ],
+        "catalogSkillIndex": 0,
+        "identitySource": "server-name",
+        "identityConfidence": 1
+      }
+    },
+    "WAM-002": {
+      "0": {
+        "name": "Frost Gust",
+        "damage": 20,
+        "targetHp": 0,
+        "direct": true,
+        "observedValid": true,
+        "lastObservedAt": "2026-10-11T10:27:35.959Z",
+        "damageHistory": [
+          20
+        ],
+        "observationCount": 2,
+        "namesSeen": [
+          "Frost Gust"
+        ],
+        "catalogSkillIndex": 0,
+        "identitySource": "server-name",
+        "identityConfidence": 1
+      }
+    },
+    "HLC-011": {
+      "0": {
+        "name": "Gleam",
+        "damage": 30,
+        "direct": true,
+        "observedValid": true,
+        "observedOpponent": true,
+        "lastObservedAt": "2026-10-11T10:23:18.925Z",
+        "damageHistory": [
+          30
+        ],
+        "observationCount": 1,
+        "namesSeen": [
+          "Gleam"
         ],
         "catalogSkillIndex": 0,
         "identitySource": "server-name",
@@ -1966,871 +2020,6 @@
     }
   ],
   "effectEvidence": [
-    {
-      "messageKey": "effect.skillBoosted",
-      "sourceCardCode": "CRA-002",
-      "sourceName": "Cinder Amato",
-      "params": {
-        "sourceName": "Cinder Amato",
-        "amount": 20,
-        "cause": "conditionalSkill"
-      },
-      "observedAt": "2026-10-10T10:21:43.008Z"
-    },
-    {
-      "messageKey": "effect.trainerScripted",
-      "sourceCardCode": "STB-003",
-      "sourceName": "Holy Sanctuary",
-      "params": {
-        "scriptKey": "STB-003",
-        "sourceName": "Holy Sanctuary",
-        "applied": true,
-        "series": "Holy"
-      },
-      "observedAt": "2026-10-10T10:22:26.327Z"
-    },
-    {
-      "messageKey": "effect.itemActivated",
-      "sourceCardCode": "STB-008",
-      "sourceName": null,
-      "params": {
-        "itemName": "Holy Aegis",
-        "targetName": "Dawn Holy",
-        "results": [
-          {
-            "type": "stat",
-            "stat": "skillDamage",
-            "amount": 20
-          },
-          {
-            "type": "stat",
-            "stat": "hp",
-            "amount": 20
-          }
-        ]
-      },
-      "observedAt": "2026-10-10T10:22:26.327Z"
-    },
-    {
-      "messageKey": "effect.itemActivated",
-      "sourceCardCode": "STB-008",
-      "sourceName": null,
-      "params": {
-        "itemName": "Holy Aegis",
-        "targetName": "Dawn Holy",
-        "results": [
-          {
-            "type": "stat",
-            "stat": "skillDamage",
-            "amount": 20
-          },
-          {
-            "type": "stat",
-            "stat": "hp",
-            "amount": 20
-          }
-        ]
-      },
-      "observedAt": "2026-10-10T10:22:58.859Z"
-    },
-    {
-      "messageKey": "effect.trainerScripted",
-      "sourceCardCode": "PB-116",
-      "sourceName": "Hidden Treat",
-      "params": {
-        "scriptKey": "PB-116",
-        "sourceName": "Hidden Treat",
-        "applied": true
-      },
-      "observedAt": "2026-10-10T10:23:21.178Z"
-    },
-    {
-      "messageKey": "effect.trainerScripted",
-      "sourceCardCode": "PB-110",
-      "sourceName": "City Freeze",
-      "params": {
-        "scriptKey": "PB-110",
-        "sourceName": "City Freeze",
-        "applied": true
-      },
-      "observedAt": "2026-10-10T10:23:55.904Z"
-    },
-    {
-      "messageKey": "effect.trainerScripted",
-      "sourceCardCode": "PB-102",
-      "sourceName": "Soft Landing",
-      "params": {
-        "scriptKey": "PB-102",
-        "sourceName": "Soft Landing",
-        "applied": true
-      },
-      "observedAt": "2026-10-10T10:24:42.144Z"
-    },
-    {
-      "messageKey": "effect.trainerScripted",
-      "sourceCardCode": "PB-102",
-      "sourceName": "Soft Landing",
-      "params": {
-        "scriptKey": "PB-102",
-        "sourceName": "Soft Landing",
-        "applied": true
-      },
-      "observedAt": "2026-10-10T10:28:00.432Z"
-    },
-    {
-      "messageKey": "effect.trainerScripted",
-      "sourceCardCode": "BS-061",
-      "sourceName": "Even Footing",
-      "params": {
-        "scriptKey": "BS-061",
-        "sourceName": "Even Footing",
-        "applied": true
-      },
-      "observedAt": "2026-10-10T10:28:33.897Z"
-    },
-    {
-      "messageKey": "effect.nextSkillReduced",
-      "sourceCardCode": "SLC-003",
-      "sourceName": "Jelly Slime",
-      "params": {
-        "sourceName": "Jelly Slime",
-        "targetName": "Drip Slime",
-        "amount": 20,
-        "cause": "trait"
-      },
-      "observedAt": "2026-10-10T10:29:52.119Z"
-    },
-    {
-      "messageKey": "effect.targetHpReduced",
-      "sourceCardCode": "SLC-012",
-      "sourceName": "Ooze Slime",
-      "params": {
-        "sourceName": "Ooze Slime",
-        "targetName": "Jelly Slime",
-        "amount": 20,
-        "duration": "thisAttack"
-      },
-      "observedAt": "2026-10-10T10:30:37.565Z"
-    },
-    {
-      "messageKey": "effect.nextSkillReduced",
-      "sourceCardCode": "SLC-003",
-      "sourceName": "Jelly Slime",
-      "params": {
-        "sourceName": "Jelly Slime",
-        "targetName": "Ooze Slime",
-        "amount": 20,
-        "cause": "trait"
-      },
-      "observedAt": "2026-10-10T10:30:37.565Z"
-    },
-    {
-      "messageKey": "effect.targetHpReduced",
-      "sourceCardCode": "BS-002",
-      "sourceName": "Black AMATO Cat and Fish",
-      "params": {
-        "sourceName": "Black AMATO Cat and Fish",
-        "targetName": "Jelly Slime",
-        "amount": 20,
-        "duration": "thisAttack"
-      },
-      "observedAt": "2026-10-10T10:30:48.996Z"
-    },
-    {
-      "messageKey": "effect.nextSkillReduced",
-      "sourceCardCode": "SLC-003",
-      "sourceName": "Jelly Slime",
-      "params": {
-        "sourceName": "Jelly Slime",
-        "targetName": "Black AMATO Cat and Fish",
-        "amount": 20,
-        "cause": "trait"
-      },
-      "observedAt": "2026-10-10T10:30:48.996Z"
-    },
-    {
-      "messageKey": "effect.trainerScripted",
-      "sourceCardCode": "BS-055",
-      "sourceName": "Treat Decoy",
-      "params": {
-        "scriptKey": "BS-055",
-        "sourceName": "Treat Decoy",
-        "applied": true
-      },
-      "observedAt": "2026-10-10T10:31:33.406Z"
-    },
-    {
-      "messageKey": "effect.nextSkillReduced",
-      "sourceCardCode": "SLC-003",
-      "sourceName": "Jelly Slime",
-      "params": {
-        "sourceName": "Jelly Slime",
-        "targetName": "Snow Amato",
-        "amount": 20,
-        "cause": "trait"
-      },
-      "observedAt": "2026-10-10T10:32:07.671Z"
-    },
-    {
-      "messageKey": "effect.nextSkillReduced",
-      "sourceCardCode": "SLC-003",
-      "sourceName": "Jelly Slime",
-      "params": {
-        "sourceName": "Jelly Slime",
-        "targetName": "Ember Amato",
-        "amount": 20,
-        "cause": "trait"
-      },
-      "observedAt": "2026-10-10T10:32:52.618Z"
-    },
-    {
-      "messageKey": "effect.koCharge",
-      "sourceCardCode": "AMC-010",
-      "sourceName": "Amato's Flame",
-      "params": {
-        "sourceName": "Amato's Flame",
-        "count": 1
-      },
-      "observedAt": "2026-10-10T10:37:19.291Z"
-    },
-    {
-      "messageKey": "effect.continuousActivated",
-      "sourceCardCode": "BS-007",
-      "sourceName": "Black AMATO Purple Origami",
-      "params": {
-        "sourceName": "Black AMATO Purple Origami",
-        "results": [
-          {
-            "type": "stat",
-            "stat": "skillDamage",
-            "amount": 20,
-            "self": true
-          }
-        ],
-        "opponentTurnOnly": false
-      },
-      "observedAt": "2026-10-10T10:37:45.196Z"
-    },
-    {
-      "messageKey": "effect.nextSkillReduced",
-      "sourceCardCode": "SLC-013",
-      "sourceName": "Gel Slime",
-      "params": {
-        "sourceName": "Gel Slime",
-        "targetName": "Amato's Flame",
-        "amount": 20,
-        "cause": "trait"
-      },
-      "observedAt": "2026-10-10T10:40:36.272Z"
-    },
-    {
-      "messageKey": "effect.nextSkillReduced",
-      "sourceCardCode": "SLC-003",
-      "sourceName": "Jelly Slime",
-      "params": {
-        "sourceName": "Jelly Slime",
-        "targetName": "Amato's Flame",
-        "amount": 20,
-        "cause": "trait"
-      },
-      "observedAt": "2026-10-10T10:43:12.891Z"
-    },
-    {
-      "messageKey": "effect.koCharge",
-      "sourceCardCode": "AMC-010",
-      "sourceName": "Amato's Flame",
-      "params": {
-        "sourceName": "Amato's Flame",
-        "count": 1
-      },
-      "observedAt": "2026-10-10T10:43:12.891Z"
-    },
-    {
-      "messageKey": "effect.skillBoosted",
-      "sourceCardCode": "CRA-002",
-      "sourceName": "Cinder Amato",
-      "params": {
-        "sourceName": "Cinder Amato",
-        "amount": 20,
-        "cause": "conditionalSkill",
-        "againstName": "Amato's Flame"
-      },
-      "observedAt": "2026-10-10T10:44:21.690Z"
-    },
-    {
-      "messageKey": "effect.targetHpReduced",
-      "sourceCardCode": "SLC-002",
-      "sourceName": "Bubble Slime",
-      "params": {
-        "sourceName": "Bubble Slime",
-        "targetName": "Black AMATO Awaiting New Growth",
-        "amount": 20,
-        "duration": "thisAttack"
-      },
-      "observedAt": "2026-10-10T10:44:55.354Z"
-    },
-    {
-      "messageKey": "effect.continuousActivated",
-      "sourceCardCode": "AMC-009",
-      "sourceName": "Helios Amato",
-      "params": {
-        "sourceName": "Helios Amato",
-        "results": [
-          {
-            "type": "stat",
-            "stat": "skillDamage",
-            "amount": 20,
-            "self": true
-          }
-        ],
-        "opponentTurnOnly": false
-      },
-      "observedAt": "2026-10-10T10:46:54.594Z"
-    },
-    {
-      "messageKey": "effect.nextSkillReduced",
-      "sourceCardCode": "SLC-003",
-      "sourceName": "Jelly Slime",
-      "params": {
-        "sourceName": "Jelly Slime",
-        "targetName": "Helios Amato",
-        "amount": 20,
-        "cause": "trait"
-      },
-      "observedAt": "2026-10-10T10:46:54.594Z"
-    },
-    {
-      "messageKey": "effect.targetHpReduced",
-      "sourceCardCode": "SLC-009",
-      "sourceName": "Ancient Slime",
-      "params": {
-        "sourceName": "Ancient Slime",
-        "targetName": "Black AMATO Tea Break",
-        "amount": 20,
-        "duration": "thisAttack"
-      },
-      "observedAt": "2026-10-10T10:46:54.594Z"
-    },
-    {
-      "messageKey": "effect.onPlayActivated",
-      "sourceCardCode": "AMC-004",
-      "sourceName": "Solar Amato",
-      "params": {
-        "sourceName": "Solar Amato",
-        "results": [
-          {
-            "type": "stat",
-            "stat": "skillDamage",
-            "amount": 20,
-            "self": true
-          }
-        ]
-      },
-      "observedAt": "2026-10-10T10:47:28.125Z"
-    },
-    {
-      "messageKey": "effect.skillBoosted",
-      "sourceCardCode": "AMC-002",
-      "sourceName": "Sunny Amato",
-      "params": {
-        "sourceName": "Sunny Amato",
-        "amount": 20,
-        "cause": "conditionalSkill",
-        "againstName": "Black AMATO Awaiting New Growth"
-      },
-      "observedAt": "2026-10-10T10:49:16.397Z"
-    },
-    {
-      "messageKey": "effect.koCharge",
-      "sourceCardCode": "AMC-010",
-      "sourceName": "Amato's Flame",
-      "params": {
-        "sourceName": "Amato's Flame",
-        "count": 1
-      },
-      "observedAt": "2026-10-10T10:53:15.715Z"
-    },
-    {
-      "messageKey": "effect.nextSkillReduced",
-      "sourceCardCode": "SLC-013",
-      "sourceName": "Gel Slime",
-      "params": {
-        "sourceName": "Gel Slime",
-        "targetName": "Amato's Flame",
-        "amount": 20,
-        "cause": "trait"
-      },
-      "observedAt": "2026-10-10T10:53:48.269Z"
-    },
-    {
-      "messageKey": "effect.targetHpReduced",
-      "sourceCardCode": "SLC-009",
-      "sourceName": "Ancient Slime",
-      "params": {
-        "sourceName": "Ancient Slime",
-        "targetName": "Black AMATO Tea Break",
-        "amount": 20,
-        "duration": "thisAttack"
-      },
-      "observedAt": "2026-10-10T10:53:48.269Z"
-    },
-    {
-      "messageKey": "effect.skillBoosted",
-      "sourceCardCode": "CRA-002",
-      "sourceName": "Cinder Amato",
-      "params": {
-        "sourceName": "Cinder Amato",
-        "amount": 20,
-        "cause": "conditionalSkill",
-        "againstName": "Slime"
-      },
-      "observedAt": "2026-10-10T10:54:47.448Z"
-    },
-    {
-      "messageKey": "effect.koCharge",
-      "sourceCardCode": "AMC-010",
-      "sourceName": "Amato's Flame",
-      "params": {
-        "sourceName": "Amato's Flame",
-        "count": 1
-      },
-      "observedAt": "2026-10-10T10:54:59.159Z"
-    },
-    {
-      "messageKey": "effect.skillBoosted",
-      "sourceCardCode": "AMC-002",
-      "sourceName": "Sunny Amato",
-      "params": {
-        "sourceName": "Sunny Amato",
-        "amount": 20,
-        "cause": "conditionalSkill",
-        "againstName": "Ember Amato"
-      },
-      "observedAt": "2026-10-10T11:02:21.019Z"
-    },
-    {
-      "messageKey": "effect.koCharge",
-      "sourceCardCode": "AMC-010",
-      "sourceName": "Amato's Flame",
-      "params": {
-        "sourceName": "Amato's Flame",
-        "count": 1
-      },
-      "observedAt": "2026-10-10T11:04:09.042Z"
-    },
-    {
-      "messageKey": "effect.koCharge",
-      "sourceCardCode": "AMC-010",
-      "sourceName": "Amato's Flame",
-      "params": {
-        "sourceName": "Amato's Flame",
-        "count": 1
-      },
-      "observedAt": "2026-10-10T11:04:53.934Z"
-    },
-    {
-      "messageKey": "effect.skillBoosted",
-      "sourceCardCode": "AMC-002",
-      "sourceName": "Sunny Amato",
-      "params": {
-        "sourceName": "Sunny Amato",
-        "amount": 20,
-        "cause": "conditionalSkill",
-        "againstName": "Ember Amato"
-      },
-      "observedAt": "2026-10-10T11:05:37.981Z"
-    },
-    {
-      "messageKey": "effect.skillBoosted",
-      "sourceCardCode": "CRA-002",
-      "sourceName": "Cinder Amato",
-      "params": {
-        "sourceName": "Cinder Amato",
-        "amount": 20,
-        "cause": "conditionalSkill",
-        "againstName": "Sunny Amato"
-      },
-      "observedAt": "2026-10-10T11:06:45.490Z"
-    },
-    {
-      "messageKey": "effect.skillBoosted",
-      "sourceCardCode": "AMC-002",
-      "sourceName": "Sunny Amato",
-      "params": {
-        "sourceName": "Sunny Amato",
-        "amount": 20,
-        "cause": "conditionalSkill",
-        "againstName": "Cinder Amato"
-      },
-      "observedAt": "2026-10-10T11:06:56.332Z"
-    },
-    {
-      "messageKey": "effect.targetHpReduced",
-      "sourceCardCode": "BS-002",
-      "sourceName": "Black AMATO Cat and Fish",
-      "params": {
-        "sourceName": "Black AMATO Cat and Fish",
-        "targetName": "Sunny Amato",
-        "amount": 20,
-        "duration": "thisAttack"
-      },
-      "observedAt": "2026-10-10T11:07:29.428Z"
-    },
-    {
-      "messageKey": "effect.targetHpReduced",
-      "sourceCardCode": "SLC-012",
-      "sourceName": "Ooze Slime",
-      "params": {
-        "sourceName": "Ooze Slime",
-        "targetName": "Black AMATO Cat and Fish",
-        "amount": 20,
-        "duration": "thisAttack"
-      },
-      "observedAt": "2026-10-10T11:07:40.217Z"
-    },
-    {
-      "messageKey": "effect.continuousActivated",
-      "sourceCardCode": "BS-007",
-      "sourceName": "Black AMATO Purple Origami",
-      "params": {
-        "sourceName": "Black AMATO Purple Origami",
-        "results": [
-          {
-            "type": "stat",
-            "stat": "skillDamage",
-            "amount": 20,
-            "self": true
-          }
-        ],
-        "opponentTurnOnly": false
-      },
-      "observedAt": "2026-10-10T11:09:40.161Z"
-    },
-    {
-      "messageKey": "effect.continuousActivated",
-      "sourceCardCode": "BS-007",
-      "sourceName": "Black AMATO Purple Origami",
-      "params": {
-        "sourceName": "Black AMATO Purple Origami",
-        "results": [
-          {
-            "type": "stat",
-            "stat": "skillDamage",
-            "amount": 20,
-            "self": true
-          }
-        ],
-        "opponentTurnOnly": false
-      },
-      "observedAt": "2026-10-10T11:11:43.860Z"
-    },
-    {
-      "messageKey": "effect.targetHpReduced",
-      "sourceCardCode": "SLC-002",
-      "sourceName": "Bubble Slime",
-      "params": {
-        "sourceName": "Bubble Slime",
-        "targetName": "Black AMATO Purple Origami",
-        "amount": 20,
-        "duration": "thisAttack"
-      },
-      "observedAt": "2026-10-10T11:12:27.555Z"
-    },
-    {
-      "messageKey": "effect.continuousActivated",
-      "sourceCardCode": "BS-007",
-      "sourceName": "Black AMATO Purple Origami",
-      "params": {
-        "sourceName": "Black AMATO Purple Origami",
-        "results": [
-          {
-            "type": "stat",
-            "stat": "skillDamage",
-            "amount": 20,
-            "self": true
-          }
-        ],
-        "opponentTurnOnly": false
-      },
-      "observedAt": "2026-10-10T11:13:22.502Z"
-    },
-    {
-      "messageKey": "effect.koCharge",
-      "sourceCardCode": "AMC-010",
-      "sourceName": "Amato's Flame",
-      "params": {
-        "sourceName": "Amato's Flame",
-        "count": 1
-      },
-      "observedAt": "2026-10-10T11:16:28.966Z"
-    },
-    {
-      "messageKey": "effect.skillBoosted",
-      "sourceCardCode": "CRA-002",
-      "sourceName": "Cinder Amato",
-      "params": {
-        "sourceName": "Cinder Amato",
-        "amount": 20,
-        "cause": "conditionalSkill",
-        "againstName": "Drip Slime"
-      },
-      "observedAt": "2026-10-10T11:18:13.288Z"
-    },
-    {
-      "messageKey": "effect.skillBoosted",
-      "sourceCardCode": "HLC-F02",
-      "sourceName": "Cinder Holy",
-      "params": {
-        "sourceName": "Cinder Holy",
-        "amount": 20,
-        "cause": "conditionalSkill",
-        "againstName": "Blob Slime"
-      },
-      "observedAt": "2026-10-10T11:18:36.429Z"
-    },
-    {
-      "messageKey": "effect.koCharge",
-      "sourceCardCode": "AMC-010",
-      "sourceName": "Amato's Flame",
-      "params": {
-        "sourceName": "Amato's Flame",
-        "count": 1
-      },
-      "observedAt": "2026-10-10T11:18:47.517Z"
-    },
-    {
-      "messageKey": "effect.trainerScripted",
-      "sourceCardCode": "STB-003",
-      "sourceName": "Holy Sanctuary",
-      "params": {
-        "scriptKey": "STB-003",
-        "sourceName": "Holy Sanctuary",
-        "applied": true,
-        "series": "Holy"
-      },
-      "observedAt": "2026-10-10T11:19:53.868Z"
-    },
-    {
-      "messageKey": "effect.itemActivated",
-      "sourceCardCode": "STB-008",
-      "sourceName": null,
-      "params": {
-        "itemName": "Holy Aegis",
-        "targetName": "Lumen",
-        "results": [
-          {
-            "type": "stat",
-            "stat": "skillDamage",
-            "amount": 20
-          },
-          {
-            "type": "stat",
-            "stat": "hp",
-            "amount": 20
-          }
-        ]
-      },
-      "observedAt": "2026-10-10T11:19:53.868Z"
-    },
-    {
-      "messageKey": "effect.continuousActivated",
-      "sourceCardCode": "HLC-015",
-      "sourceName": "Beam Holy",
-      "params": {
-        "sourceName": "Beam Holy",
-        "results": [
-          {
-            "type": "stat",
-            "stat": "hp",
-            "amount": 20,
-            "targetName": "Lumen",
-            "targetCount": 1
-          }
-        ],
-        "opponentTurnOnly": true
-      },
-      "observedAt": "2026-10-10T11:20:37.472Z"
-    },
-    {
-      "messageKey": "effect.continuousActivated",
-      "sourceCardCode": "HLC-015",
-      "sourceName": "Beam Holy",
-      "params": {
-        "sourceName": "Beam Holy",
-        "results": [
-          {
-            "type": "stat",
-            "stat": "hp",
-            "amount": 20,
-            "targetName": "Lumen",
-            "targetCount": 1
-          }
-        ],
-        "opponentTurnOnly": true
-      },
-      "observedAt": "2026-10-10T11:21:12.307Z"
-    },
-    {
-      "messageKey": "effect.continuousActivated",
-      "sourceCardCode": "HLC-015",
-      "sourceName": "Beam Holy",
-      "params": {
-        "sourceName": "Beam Holy",
-        "results": [
-          {
-            "type": "stat",
-            "stat": "hp",
-            "amount": 20,
-            "targetName": "Lumen",
-            "targetCount": 1
-          }
-        ],
-        "opponentTurnOnly": true
-      },
-      "observedAt": "2026-10-10T11:21:34.942Z"
-    },
-    {
-      "messageKey": "effect.continuousActivated",
-      "sourceCardCode": "BS-007",
-      "sourceName": "Black AMATO Purple Origami",
-      "params": {
-        "sourceName": "Black AMATO Purple Origami",
-        "results": [
-          {
-            "type": "stat",
-            "stat": "skillDamage",
-            "amount": 20,
-            "self": true
-          }
-        ],
-        "opponentTurnOnly": false
-      },
-      "observedAt": "2026-10-10T11:22:11.739Z"
-    },
-    {
-      "messageKey": "effect.continuousActivated",
-      "sourceCardCode": "HLC-015",
-      "sourceName": "Beam Holy",
-      "params": {
-        "sourceName": "Beam Holy",
-        "results": [
-          {
-            "type": "stat",
-            "stat": "hp",
-            "amount": 20,
-            "targetName": "Lumen",
-            "targetCount": 1
-          }
-        ],
-        "opponentTurnOnly": true
-      },
-      "observedAt": "2026-10-10T11:22:23.037Z"
-    },
-    {
-      "messageKey": "effect.continuousActivated",
-      "sourceCardCode": "HLC-015",
-      "sourceName": "Beam Holy",
-      "params": {
-        "sourceName": "Beam Holy",
-        "results": [
-          {
-            "type": "stat",
-            "stat": "hp",
-            "amount": 20,
-            "targetName": "Lumen",
-            "targetCount": 1
-          }
-        ],
-        "opponentTurnOnly": true
-      },
-      "observedAt": "2026-10-10T11:23:10.592Z"
-    },
-    {
-      "messageKey": "effect.continuousActivated",
-      "sourceCardCode": "HLC-015",
-      "sourceName": "Beam Holy",
-      "params": {
-        "sourceName": "Beam Holy",
-        "results": [
-          {
-            "type": "stat",
-            "stat": "hp",
-            "amount": 20,
-            "targetName": "Lumen",
-            "targetCount": 1
-          }
-        ],
-        "opponentTurnOnly": true
-      },
-      "observedAt": "2026-10-10T11:23:58.916Z"
-    },
-    {
-      "messageKey": "effect.continuousActivated",
-      "sourceCardCode": "HLC-015",
-      "sourceName": "Beam Holy",
-      "params": {
-        "sourceName": "Beam Holy",
-        "results": [
-          {
-            "type": "stat",
-            "stat": "hp",
-            "amount": 20,
-            "targetName": "Lumen",
-            "targetCount": 1
-          }
-        ],
-        "opponentTurnOnly": true
-      },
-      "observedAt": "2026-10-10T11:24:22.146Z"
-    },
-    {
-      "messageKey": "effect.continuousActivated",
-      "sourceCardCode": "BS-007",
-      "sourceName": "Black AMATO Purple Origami",
-      "params": {
-        "sourceName": "Black AMATO Purple Origami",
-        "results": [
-          {
-            "type": "stat",
-            "stat": "skillDamage",
-            "amount": 20,
-            "self": true
-          }
-        ],
-        "opponentTurnOnly": false
-      },
-      "observedAt": "2026-10-10T11:24:59.010Z"
-    },
-    {
-      "messageKey": "effect.skillBoosted",
-      "sourceCardCode": "AMC-002",
-      "sourceName": "Sunny Amato",
-      "params": {
-        "sourceName": "Sunny Amato",
-        "amount": 20,
-        "cause": "conditionalSkill",
-        "againstName": "Black AMATO Tea Break"
-      },
-      "observedAt": "2026-10-10T11:27:03.314Z"
-    },
-    {
-      "messageKey": "effect.continuousActivated",
-      "sourceCardCode": "BS-007",
-      "sourceName": "Black AMATO Purple Origami",
-      "params": {
-        "sourceName": "Black AMATO Purple Origami",
-        "results": [
-          {
-            "type": "stat",
-            "stat": "skillDamage",
-            "amount": 20,
-            "self": true
-          }
-        ],
-        "opponentTurnOnly": false
-      },
-      "observedAt": "2026-10-10T11:28:10.352Z"
-    },
     {
       "messageKey": "effect.trainerScripted",
       "sourceCardCode": "BS-055",
@@ -3573,6 +2762,852 @@
         "duration": "thisAttack"
       },
       "observedAt": "2026-10-10T12:27:50.115Z"
+    },
+    {
+      "messageKey": "effect.targetHpReduced",
+      "sourceCardCode": "BS-002",
+      "sourceName": "Black AMATO Cat and Fish",
+      "params": {
+        "sourceName": "Black AMATO Cat and Fish",
+        "targetName": "Blob Slime",
+        "amount": 20,
+        "duration": "thisAttack"
+      },
+      "observedAt": "2026-10-11T09:43:27.717Z"
+    },
+    {
+      "messageKey": "effect.skillBoosted",
+      "sourceCardCode": "CRA-002",
+      "sourceName": "Cinder Amato",
+      "params": {
+        "sourceName": "Cinder Amato",
+        "amount": 20,
+        "cause": "conditionalSkill"
+      },
+      "observedAt": "2026-10-11T09:44:45.494Z"
+    },
+    {
+      "messageKey": "effect.continuousActivated",
+      "sourceCardCode": "BS-007",
+      "sourceName": "Black AMATO Purple Origami",
+      "params": {
+        "sourceName": "Black AMATO Purple Origami",
+        "results": [
+          {
+            "type": "stat",
+            "stat": "skillDamage",
+            "amount": 20,
+            "self": true
+          }
+        ],
+        "opponentTurnOnly": false
+      },
+      "observedAt": "2026-10-11T09:45:30.110Z"
+    },
+    {
+      "messageKey": "effect.targetHpReduced",
+      "sourceCardCode": "BS-002",
+      "sourceName": "Black AMATO Cat and Fish",
+      "params": {
+        "sourceName": "Black AMATO Cat and Fish",
+        "targetName": "Slime",
+        "amount": 20,
+        "duration": "thisAttack"
+      },
+      "observedAt": "2026-10-11T09:48:25.819Z"
+    },
+    {
+      "messageKey": "effect.skillBoosted",
+      "sourceCardCode": "AMC-002",
+      "sourceName": "Sunny Amato",
+      "params": {
+        "sourceName": "Sunny Amato",
+        "amount": 20,
+        "cause": "conditionalSkill",
+        "againstName": "Black AMATO Awaiting New Growth"
+      },
+      "observedAt": "2026-10-11T09:48:48.987Z"
+    },
+    {
+      "messageKey": "effect.skillBoosted",
+      "sourceCardCode": "AMC-003",
+      "sourceName": "Glow Amato",
+      "params": {
+        "sourceName": "Glow Amato",
+        "amount": 20,
+        "cause": "conditionalSkill",
+        "againstName": "Cinder Holy"
+      },
+      "observedAt": "2026-10-11T09:50:38.441Z"
+    },
+    {
+      "messageKey": "effect.skillBoosted",
+      "sourceCardCode": "CRA-002",
+      "sourceName": "Cinder Amato",
+      "params": {
+        "sourceName": "Cinder Amato",
+        "amount": 20,
+        "cause": "conditionalSkill",
+        "againstName": "Glow Amato"
+      },
+      "observedAt": "2026-10-11T09:51:14.441Z"
+    },
+    {
+      "messageKey": "effect.nextSkillReduced",
+      "sourceCardCode": "SLC-003",
+      "sourceName": "Jelly Slime",
+      "params": {
+        "sourceName": "Jelly Slime",
+        "targetName": "Crystal Amato",
+        "amount": 20,
+        "cause": "trait"
+      },
+      "observedAt": "2026-10-11T09:51:26.060Z"
+    },
+    {
+      "messageKey": "effect.skillBoosted",
+      "sourceCardCode": "AMC-002",
+      "sourceName": "Sunny Amato",
+      "params": {
+        "sourceName": "Sunny Amato",
+        "amount": 20,
+        "cause": "conditionalSkill",
+        "againstName": "Ember Amato"
+      },
+      "observedAt": "2026-10-11T09:52:22.463Z"
+    },
+    {
+      "messageKey": "effect.targetHpReduced",
+      "sourceCardCode": "SLC-012",
+      "sourceName": "Ooze Slime",
+      "params": {
+        "sourceName": "Ooze Slime",
+        "targetName": "Sunny Amato",
+        "amount": 20,
+        "duration": "thisAttack"
+      },
+      "observedAt": "2026-10-11T09:52:55.312Z"
+    },
+    {
+      "messageKey": "effect.targetHpReduced",
+      "sourceCardCode": "SLC-012",
+      "sourceName": "Ooze Slime",
+      "params": {
+        "sourceName": "Ooze Slime",
+        "targetName": "Flicker Amato",
+        "amount": 20,
+        "duration": "thisAttack"
+      },
+      "observedAt": "2026-10-11T09:53:40.422Z"
+    },
+    {
+      "messageKey": "effect.targetHpReduced",
+      "sourceCardCode": "BS-002",
+      "sourceName": "Black AMATO Cat and Fish",
+      "params": {
+        "sourceName": "Black AMATO Cat and Fish",
+        "targetName": "Flicker Amato",
+        "amount": 20,
+        "duration": "thisAttack"
+      },
+      "observedAt": "2026-10-11T09:54:47.086Z"
+    },
+    {
+      "messageKey": "effect.targetHpReduced",
+      "sourceCardCode": "BS-002",
+      "sourceName": "Black AMATO Cat and Fish",
+      "params": {
+        "sourceName": "Black AMATO Cat and Fish",
+        "targetName": "Blob Slime",
+        "amount": 20,
+        "duration": "thisAttack"
+      },
+      "observedAt": "2026-10-11T09:55:30.617Z"
+    },
+    {
+      "messageKey": "effect.targetHpReduced",
+      "sourceCardCode": "BS-002",
+      "sourceName": "Black AMATO Cat and Fish",
+      "params": {
+        "sourceName": "Black AMATO Cat and Fish",
+        "targetName": "Drip Slime",
+        "amount": 20,
+        "duration": "thisAttack"
+      },
+      "observedAt": "2026-10-11T09:57:00.936Z"
+    },
+    {
+      "messageKey": "effect.trainerScripted",
+      "sourceCardCode": "BS-055",
+      "sourceName": "Treat Decoy",
+      "params": {
+        "scriptKey": "BS-055",
+        "sourceName": "Treat Decoy",
+        "applied": true
+      },
+      "observedAt": "2026-10-11T09:57:45.005Z"
+    },
+    {
+      "messageKey": "effect.continuousActivated",
+      "sourceCardCode": "WAM-002",
+      "sourceName": "Frost Amato",
+      "params": {
+        "sourceName": "Frost Amato",
+        "results": [
+          {
+            "type": "stat",
+            "stat": "hp",
+            "amount": 20,
+            "self": true
+          }
+        ],
+        "opponentTurnOnly": false
+      },
+      "observedAt": "2026-10-11T09:58:07.641Z"
+    },
+    {
+      "messageKey": "effect.trainerScripted",
+      "sourceCardCode": "PB-102",
+      "sourceName": "Soft Landing",
+      "params": {
+        "scriptKey": "PB-102",
+        "sourceName": "Soft Landing",
+        "applied": true
+      },
+      "observedAt": "2026-10-11T09:58:40.712Z"
+    },
+    {
+      "messageKey": "effect.continuousActivated",
+      "sourceCardCode": "BS-007",
+      "sourceName": "Black AMATO Purple Origami",
+      "params": {
+        "sourceName": "Black AMATO Purple Origami",
+        "results": [
+          {
+            "type": "stat",
+            "stat": "skillDamage",
+            "amount": 20,
+            "self": true
+          }
+        ],
+        "opponentTurnOnly": false
+      },
+      "observedAt": "2026-10-11T09:59:02.876Z"
+    },
+    {
+      "messageKey": "effect.targetHpReduced",
+      "sourceCardCode": "BS-002",
+      "sourceName": "Black AMATO Cat and Fish",
+      "params": {
+        "sourceName": "Black AMATO Cat and Fish",
+        "targetName": "Drip Slime",
+        "amount": 20,
+        "duration": "thisAttack"
+      },
+      "observedAt": "2026-10-11T10:00:35.065Z"
+    },
+    {
+      "messageKey": "effect.itemActivated",
+      "sourceCardCode": "PB-133",
+      "sourceName": null,
+      "params": {
+        "itemName": "Calm Visor",
+        "targetName": "Tidal Slime",
+        "results": [
+          {
+            "type": "attackerPenalty",
+            "amount": 20
+          }
+        ]
+      },
+      "observedAt": "2026-10-11T10:00:46.232Z"
+    },
+    {
+      "messageKey": "effect.nextSkillReduced",
+      "sourceCardCode": "PB-133",
+      "sourceName": "Calm Visor",
+      "params": {
+        "sourceName": "Calm Visor",
+        "targetName": "Black AMATO Purple Origami",
+        "amount": 20,
+        "cause": "item"
+      },
+      "observedAt": "2026-10-11T10:01:09.915Z"
+    },
+    {
+      "messageKey": "effect.targetHpReduced",
+      "sourceCardCode": "BS-002",
+      "sourceName": "Black AMATO Cat and Fish",
+      "params": {
+        "sourceName": "Black AMATO Cat and Fish",
+        "targetName": "Tidal Slime",
+        "amount": 20,
+        "duration": "thisAttack"
+      },
+      "observedAt": "2026-10-11T10:01:21.025Z"
+    },
+    {
+      "messageKey": "effect.nextSkillReduced",
+      "sourceCardCode": "PB-133",
+      "sourceName": "Calm Visor",
+      "params": {
+        "sourceName": "Calm Visor",
+        "targetName": "Black AMATO Cat and Fish",
+        "amount": 20,
+        "cause": "item"
+      },
+      "observedAt": "2026-10-11T10:01:21.025Z"
+    },
+    {
+      "messageKey": "effect.continuousActivated",
+      "sourceCardCode": "BS-007",
+      "sourceName": "Black AMATO Purple Origami",
+      "params": {
+        "sourceName": "Black AMATO Purple Origami",
+        "results": [
+          {
+            "type": "stat",
+            "stat": "skillDamage",
+            "amount": 20,
+            "self": true
+          }
+        ],
+        "opponentTurnOnly": false
+      },
+      "observedAt": "2026-10-11T10:01:21.025Z"
+    },
+    {
+      "messageKey": "effect.nextSkillReduced",
+      "sourceCardCode": "PB-133",
+      "sourceName": "Calm Visor",
+      "params": {
+        "sourceName": "Calm Visor",
+        "targetName": "Black AMATO Purple Origami",
+        "amount": 20,
+        "cause": "item"
+      },
+      "observedAt": "2026-10-11T10:01:31.946Z"
+    },
+    {
+      "messageKey": "effect.nextSkillReduced",
+      "sourceCardCode": "PB-133",
+      "sourceName": "Calm Visor",
+      "params": {
+        "sourceName": "Calm Visor",
+        "targetName": "Cinder Holy",
+        "amount": 20,
+        "cause": "item"
+      },
+      "observedAt": "2026-10-11T10:03:24.808Z"
+    },
+    {
+      "messageKey": "effect.nextSkillReduced",
+      "sourceCardCode": "PB-133",
+      "sourceName": "Calm Visor",
+      "params": {
+        "sourceName": "Calm Visor",
+        "targetName": "Cinder Holy",
+        "amount": 20,
+        "cause": "item"
+      },
+      "observedAt": "2026-10-11T10:04:09.624Z"
+    },
+    {
+      "messageKey": "effect.skillBoosted",
+      "sourceCardCode": "AMC-002",
+      "sourceName": "Sunny Amato",
+      "params": {
+        "sourceName": "Sunny Amato",
+        "amount": 20,
+        "cause": "conditionalSkill",
+        "againstName": "Black AMATO Awaiting New Growth"
+      },
+      "observedAt": "2026-10-11T10:05:37.026Z"
+    },
+    {
+      "messageKey": "effect.onPlayActivated",
+      "sourceCardCode": "AMC-005",
+      "sourceName": "Sunflare Amato",
+      "params": {
+        "sourceName": "Sunflare Amato",
+        "results": [
+          {
+            "type": "stat",
+            "stat": "skillDamage",
+            "amount": 20,
+            "self": true
+          }
+        ]
+      },
+      "observedAt": "2026-10-11T10:06:20.426Z"
+    },
+    {
+      "messageKey": "effect.nextSkillReduced",
+      "sourceCardCode": "SLC-003",
+      "sourceName": "Jelly Slime",
+      "params": {
+        "sourceName": "Jelly Slime",
+        "targetName": "Sunflare Amato",
+        "amount": 20,
+        "cause": "trait"
+      },
+      "observedAt": "2026-10-11T10:07:05.715Z"
+    },
+    {
+      "messageKey": "effect.koDraw",
+      "sourceCardCode": "AMC-005",
+      "sourceName": "Sunflare Amato",
+      "params": {
+        "sourceName": "Sunflare Amato",
+        "count": 1
+      },
+      "observedAt": "2026-10-11T10:07:05.715Z"
+    },
+    {
+      "messageKey": "effect.continuousActivated",
+      "sourceCardCode": "BS-007",
+      "sourceName": "Black AMATO Purple Origami",
+      "params": {
+        "sourceName": "Black AMATO Purple Origami",
+        "results": [
+          {
+            "type": "stat",
+            "stat": "skillDamage",
+            "amount": 20,
+            "self": true
+          }
+        ],
+        "opponentTurnOnly": false
+      },
+      "observedAt": "2026-10-11T10:08:00.607Z"
+    },
+    {
+      "messageKey": "effect.skillBoosted",
+      "sourceCardCode": "AMC-002",
+      "sourceName": "Sunny Amato",
+      "params": {
+        "sourceName": "Sunny Amato",
+        "amount": 20,
+        "cause": "conditionalSkill",
+        "againstName": "Ember Amato"
+      },
+      "observedAt": "2026-10-11T10:08:33.027Z"
+    },
+    {
+      "messageKey": "effect.onPlayActivated",
+      "sourceCardCode": "AMC-004",
+      "sourceName": "Solar Amato",
+      "params": {
+        "sourceName": "Solar Amato",
+        "results": [
+          {
+            "type": "stat",
+            "stat": "skillDamage",
+            "amount": 20,
+            "self": true
+          }
+        ]
+      },
+      "observedAt": "2026-10-11T10:12:05.928Z"
+    },
+    {
+      "messageKey": "effect.nextSkillReduced",
+      "sourceCardCode": "SLC-003",
+      "sourceName": "Jelly Slime",
+      "params": {
+        "sourceName": "Jelly Slime",
+        "targetName": "Solar Amato",
+        "amount": 20,
+        "cause": "trait"
+      },
+      "observedAt": "2026-10-11T10:12:05.928Z"
+    },
+    {
+      "messageKey": "effect.trainerScripted",
+      "sourceCardCode": "PB-104",
+      "sourceName": "Pocket Shuffle",
+      "params": {
+        "scriptKey": "PB-104",
+        "sourceName": "Pocket Shuffle",
+        "applied": true
+      },
+      "observedAt": "2026-10-11T10:13:40.288Z"
+    },
+    {
+      "messageKey": "effect.targetHpReduced",
+      "sourceCardCode": "SLC-015",
+      "sourceName": "Puddle Slime",
+      "params": {
+        "sourceName": "Puddle Slime",
+        "targetName": "Black AMATO Cat and Fish",
+        "amount": 20,
+        "duration": "thisAttack"
+      },
+      "observedAt": "2026-10-11T10:14:12.524Z"
+    },
+    {
+      "messageKey": "effect.targetHpReduced",
+      "sourceCardCode": "SLC-015",
+      "sourceName": "Puddle Slime",
+      "params": {
+        "sourceName": "Puddle Slime",
+        "targetName": "Black AMATO Purple Origami",
+        "amount": 20,
+        "duration": "thisAttack"
+      },
+      "observedAt": "2026-10-11T10:15:32.264Z"
+    },
+    {
+      "messageKey": "effect.targetHpReduced",
+      "sourceCardCode": "SLC-015",
+      "sourceName": "Puddle Slime",
+      "params": {
+        "sourceName": "Puddle Slime",
+        "targetName": "Black AMATO Awaiting New Growth",
+        "amount": 20,
+        "duration": "thisAttack"
+      },
+      "observedAt": "2026-10-11T10:15:54.178Z"
+    },
+    {
+      "messageKey": "effect.targetHpReduced",
+      "sourceCardCode": "BS-002",
+      "sourceName": "Black AMATO Cat and Fish",
+      "params": {
+        "sourceName": "Black AMATO Cat and Fish",
+        "targetName": "Amato",
+        "amount": 20,
+        "duration": "thisAttack"
+      },
+      "observedAt": "2026-10-11T10:18:03.675Z"
+    },
+    {
+      "messageKey": "effect.skillBoosted",
+      "sourceCardCode": "AMC-002",
+      "sourceName": "Sunny Amato",
+      "params": {
+        "sourceName": "Sunny Amato",
+        "amount": 20,
+        "cause": "conditionalSkill"
+      },
+      "observedAt": "2026-10-11T10:19:21.677Z"
+    },
+    {
+      "messageKey": "effect.targetHpReduced",
+      "sourceCardCode": "BS-002",
+      "sourceName": "Black AMATO Cat and Fish",
+      "params": {
+        "sourceName": "Black AMATO Cat and Fish",
+        "targetName": "Flicker Amato",
+        "amount": 20,
+        "duration": "thisAttack"
+      },
+      "observedAt": "2026-10-11T10:21:13.294Z"
+    },
+    {
+      "messageKey": "effect.skillBoosted",
+      "sourceCardCode": "AMC-002",
+      "sourceName": "Sunny Amato",
+      "params": {
+        "sourceName": "Sunny Amato",
+        "amount": 20,
+        "cause": "conditionalSkill",
+        "againstName": "Black AMATO Cat and Fish"
+      },
+      "observedAt": "2026-10-11T10:21:24.511Z"
+    },
+    {
+      "messageKey": "effect.continuousActivated",
+      "sourceCardCode": "BS-007",
+      "sourceName": "Black AMATO Purple Origami",
+      "params": {
+        "sourceName": "Black AMATO Purple Origami",
+        "results": [
+          {
+            "type": "stat",
+            "stat": "skillDamage",
+            "amount": 20,
+            "self": true
+          }
+        ],
+        "opponentTurnOnly": false
+      },
+      "observedAt": "2026-10-11T10:22:31.033Z"
+    },
+    {
+      "messageKey": "effect.onPlayActivated",
+      "sourceCardCode": "HLC-001",
+      "sourceName": "Holy",
+      "params": {
+        "sourceName": "Holy",
+        "results": [
+          {
+            "type": "stat",
+            "stat": "hp",
+            "amount": 20,
+            "targetName": "Halo Pup",
+            "targetCount": 1,
+            "targetGroup": "allies",
+            "verb": "guard"
+          }
+        ]
+      },
+      "observedAt": "2026-10-11T10:24:03.394Z"
+    },
+    {
+      "messageKey": "effect.skillBoosted",
+      "sourceCardCode": "AMC-002",
+      "sourceName": "Sunny Amato",
+      "params": {
+        "sourceName": "Sunny Amato",
+        "amount": 20,
+        "cause": "conditionalSkill"
+      },
+      "observedAt": "2026-10-11T10:24:26.006Z"
+    },
+    {
+      "messageKey": "effect.targetHpReduced",
+      "sourceCardCode": "SLC-012",
+      "sourceName": "Ooze Slime",
+      "params": {
+        "sourceName": "Ooze Slime",
+        "targetName": "Sunny Amato",
+        "amount": 20,
+        "duration": "thisAttack"
+      },
+      "observedAt": "2026-10-11T10:24:58.917Z"
+    },
+    {
+      "messageKey": "effect.nextSkillReduced",
+      "sourceCardCode": "SLC-013",
+      "sourceName": "Gel Slime",
+      "params": {
+        "sourceName": "Gel Slime",
+        "targetName": "Sunlord Amato",
+        "amount": 20,
+        "cause": "trait"
+      },
+      "observedAt": "2026-10-11T10:25:42.555Z"
+    },
+    {
+      "messageKey": "effect.skillBoosted",
+      "sourceCardCode": "CRA-002",
+      "sourceName": "Cinder Amato",
+      "params": {
+        "sourceName": "Cinder Amato",
+        "amount": 20,
+        "cause": "conditionalSkill",
+        "againstName": "Slime"
+      },
+      "observedAt": "2026-10-11T10:26:16.063Z"
+    },
+    {
+      "messageKey": "effect.continuousActivated",
+      "sourceCardCode": "BS-007",
+      "sourceName": "Black AMATO Purple Origami",
+      "params": {
+        "sourceName": "Black AMATO Purple Origami",
+        "results": [
+          {
+            "type": "stat",
+            "stat": "skillDamage",
+            "amount": 20,
+            "self": true
+          }
+        ],
+        "opponentTurnOnly": false
+      },
+      "observedAt": "2026-10-11T10:26:50.963Z"
+    },
+    {
+      "messageKey": "effect.onPlayActivated",
+      "sourceCardCode": "AMC-004",
+      "sourceName": "Solar Amato",
+      "params": {
+        "sourceName": "Solar Amato",
+        "results": [
+          {
+            "type": "stat",
+            "stat": "skillDamage",
+            "amount": 20,
+            "self": true
+          }
+        ]
+      },
+      "observedAt": "2026-10-11T10:27:02.546Z"
+    },
+    {
+      "messageKey": "effect.skillBoosted",
+      "sourceCardCode": "AMC-002",
+      "sourceName": "Sunny Amato",
+      "params": {
+        "sourceName": "Sunny Amato",
+        "amount": 20,
+        "cause": "conditionalSkill",
+        "againstName": "Frost Amato"
+      },
+      "observedAt": "2026-10-11T10:27:46.734Z"
+    },
+    {
+      "messageKey": "effect.continuousActivated",
+      "sourceCardCode": "BS-007",
+      "sourceName": "Black AMATO Purple Origami",
+      "params": {
+        "sourceName": "Black AMATO Purple Origami",
+        "results": [
+          {
+            "type": "stat",
+            "stat": "skillDamage",
+            "amount": 20,
+            "self": true
+          }
+        ],
+        "opponentTurnOnly": false
+      },
+      "observedAt": "2026-10-11T10:28:08.300Z"
+    },
+    {
+      "messageKey": "effect.continuousActivated",
+      "sourceCardCode": "BS-007",
+      "sourceName": "Black AMATO Purple Origami",
+      "params": {
+        "sourceName": "Black AMATO Purple Origami",
+        "results": [
+          {
+            "type": "stat",
+            "stat": "skillDamage",
+            "amount": 20,
+            "self": true
+          }
+        ],
+        "opponentTurnOnly": false
+      },
+      "observedAt": "2026-10-11T10:28:52.215Z"
+    },
+    {
+      "messageKey": "effect.continuousActivated",
+      "sourceCardCode": "AMC-009",
+      "sourceName": "Helios Amato",
+      "params": {
+        "sourceName": "Helios Amato",
+        "results": [
+          {
+            "type": "stat",
+            "stat": "skillDamage",
+            "amount": 20,
+            "self": true
+          }
+        ],
+        "opponentTurnOnly": false
+      },
+      "observedAt": "2026-10-11T10:29:36.032Z"
+    },
+    {
+      "messageKey": "effect.trainerScripted",
+      "sourceCardCode": "PB-102",
+      "sourceName": "Soft Landing",
+      "params": {
+        "scriptKey": "PB-102",
+        "sourceName": "Soft Landing",
+        "applied": true
+      },
+      "observedAt": "2026-10-11T10:30:09.342Z"
+    },
+    {
+      "messageKey": "effect.targetHpReduced",
+      "sourceCardCode": "SLC-002",
+      "sourceName": "Bubble Slime",
+      "params": {
+        "sourceName": "Bubble Slime",
+        "targetName": "Black AMATO Purple Origami",
+        "amount": 20,
+        "duration": "thisAttack"
+      },
+      "observedAt": "2026-10-11T10:31:15.819Z"
+    },
+    {
+      "messageKey": "effect.targetHpReduced",
+      "sourceCardCode": "SLC-002",
+      "sourceName": "Bubble Slime",
+      "params": {
+        "sourceName": "Bubble Slime",
+        "targetName": "Black AMATO Purple Origami",
+        "amount": 20,
+        "duration": "thisAttack"
+      },
+      "observedAt": "2026-10-11T10:31:49.609Z"
+    },
+    {
+      "messageKey": "effect.targetHpReduced",
+      "sourceCardCode": "BS-002",
+      "sourceName": "Black AMATO Cat and Fish",
+      "params": {
+        "sourceName": "Black AMATO Cat and Fish",
+        "targetName": "Slime",
+        "amount": 20,
+        "duration": "thisAttack"
+      },
+      "observedAt": "2026-10-11T10:32:34.088Z"
+    },
+    {
+      "messageKey": "effect.targetHpReduced",
+      "sourceCardCode": "SLC-002",
+      "sourceName": "Bubble Slime",
+      "params": {
+        "sourceName": "Bubble Slime",
+        "targetName": "Ember Amato",
+        "amount": 20,
+        "duration": "thisAttack"
+      },
+      "observedAt": "2026-10-11T10:33:54.863Z"
+    },
+    {
+      "messageKey": "effect.continuousActivated",
+      "sourceCardCode": "WAM-002",
+      "sourceName": "Frost Amato",
+      "params": {
+        "sourceName": "Frost Amato",
+        "results": [
+          {
+            "type": "stat",
+            "stat": "hp",
+            "amount": 20,
+            "self": true
+          }
+        ],
+        "opponentTurnOnly": false
+      },
+      "observedAt": "2026-10-11T10:37:47.292Z"
+    },
+    {
+      "messageKey": "effect.continuousActivated",
+      "sourceCardCode": "BS-007",
+      "sourceName": "Black AMATO Purple Origami",
+      "params": {
+        "sourceName": "Black AMATO Purple Origami",
+        "results": [
+          {
+            "type": "stat",
+            "stat": "skillDamage",
+            "amount": 20,
+            "self": true
+          }
+        ],
+        "opponentTurnOnly": false
+      },
+      "observedAt": "2026-10-11T10:38:56.669Z"
+    },
+    {
+      "messageKey": "effect.skillBoosted",
+      "sourceCardCode": "CRA-002",
+      "sourceName": "Cinder Amato",
+      "params": {
+        "sourceName": "Cinder Amato",
+        "amount": 20,
+        "cause": "conditionalSkill",
+        "againstName": "Amato"
+      },
+      "observedAt": "2026-10-11T10:40:48.324Z"
     }
   ],
   "boostMedal": {
@@ -3583,16 +3618,16 @@
   "calibration": {
     "skills": {
       "AMC-008|0": {
-        "samples": 10,
-        "exactMatches": 5,
+        "samples": 13,
+        "exactMatches": 7,
         "mismatches": 0,
-        "unexplained": 5
+        "unexplained": 6
       },
       "AMC-002|0": {
-        "samples": 34,
+        "samples": 42,
         "exactMatches": 2,
         "mismatches": 0,
-        "unexplained": 32
+        "unexplained": 40
       },
       "HLC-A01|0": {
         "samples": 2,
@@ -3600,60 +3635,61 @@
         "mismatches": 0
       },
       "CRA-001|0": {
-        "samples": 30,
-        "exactMatches": 28,
+        "samples": 37,
+        "exactMatches": 35,
         "mismatches": 0,
         "unexplained": 2
       },
       "BS-013|0": {
-        "samples": 36,
-        "exactMatches": 32,
+        "samples": 39,
+        "exactMatches": 35,
         "mismatches": 0,
         "unexplained": 4
       },
       "AMC-001|0": {
-        "samples": 29,
-        "exactMatches": 29,
+        "samples": 43,
+        "exactMatches": 43,
         "mismatches": 0
       },
       "AMC-004|0": {
-        "samples": 4,
-        "exactMatches": 2,
+        "samples": 7,
+        "exactMatches": 4,
         "mismatches": 0,
-        "unexplained": 2
+        "unexplained": 3
       },
       "WAM-005|0": {
-        "samples": 14,
+        "samples": 17,
         "exactMatches": 0,
         "mismatches": 0,
-        "unexplained": 14
+        "unexplained": 17
       },
       "AMC-003|0": {
-        "samples": 3,
-        "exactMatches": 3,
-        "mismatches": 0
+        "samples": 8,
+        "exactMatches": 7,
+        "mismatches": 0,
+        "unexplained": 1
       },
       "BS-001|0": {
-        "samples": 32,
-        "exactMatches": 31,
+        "samples": 36,
+        "exactMatches": 35,
         "mismatches": 0,
         "unexplained": 1
       },
       "SLC-012|0": {
-        "samples": 21,
-        "exactMatches": 20,
+        "samples": 24,
+        "exactMatches": 23,
         "mismatches": 0,
         "unexplained": 1
       },
       "CRA-002|0": {
-        "samples": 31,
+        "samples": 35,
         "exactMatches": 6,
         "mismatches": 0,
-        "unexplained": 25
+        "unexplained": 29
       },
       "SLC-013|0": {
-        "samples": 11,
-        "exactMatches": 9,
+        "samples": 16,
+        "exactMatches": 14,
         "mismatches": 0,
         "unexplained": 2
       },
@@ -3664,25 +3700,25 @@
         "unexplained": 3
       },
       "AMC-011|0": {
-        "samples": 7,
-        "exactMatches": 7,
+        "samples": 9,
+        "exactMatches": 9,
         "mismatches": 0
       },
       "BS-007|0": {
-        "samples": 33,
-        "exactMatches": 4,
+        "samples": 46,
+        "exactMatches": 8,
         "mismatches": 0,
-        "explainedByModifier": 29
+        "explainedByModifier": 38
       },
       "HLC-F02|0": {
-        "samples": 35,
-        "exactMatches": 24,
+        "samples": 39,
+        "exactMatches": 26,
         "mismatches": 0,
-        "unexplained": 11
+        "unexplained": 13
       },
       "SLC-002|0": {
-        "samples": 18,
-        "exactMatches": 18,
+        "samples": 22,
+        "exactMatches": 22,
         "mismatches": 0
       },
       "SLC-004|0": {
@@ -3697,26 +3733,26 @@
         "unexplained": 1
       },
       "AMC-009|0": {
-        "samples": 5,
+        "samples": 6,
         "exactMatches": 2,
         "mismatches": 0,
-        "explainedByModifier": 3
+        "explainedByModifier": 4
       },
       "WAM-001|0": {
-        "samples": 18,
-        "exactMatches": 15,
+        "samples": 20,
+        "exactMatches": 17,
         "mismatches": 0,
         "unexplained": 3
       },
       "SLC-014|0": {
-        "samples": 16,
-        "exactMatches": 14,
+        "samples": 20,
+        "exactMatches": 18,
         "mismatches": 0,
         "unexplained": 2
       },
       "SLC-015|0": {
-        "samples": 2,
-        "exactMatches": 2,
+        "samples": 5,
+        "exactMatches": 5,
         "mismatches": 0
       },
       "SLC-001|0": {
@@ -3725,34 +3761,34 @@
         "mismatches": 0
       },
       "SLC-011|0": {
-        "samples": 16,
-        "exactMatches": 11,
+        "samples": 18,
+        "exactMatches": 13,
         "mismatches": 0,
         "unexplained": 5
       },
       "HLC-003|0": {
-        "samples": 6,
-        "exactMatches": 4,
+        "samples": 8,
+        "exactMatches": 6,
         "mismatches": 0,
         "unexplained": 2
       },
       "SLC-003|0": {
-        "samples": 17,
-        "exactMatches": 13,
+        "samples": 19,
+        "exactMatches": 15,
         "mismatches": 0,
         "unexplained": 4
       },
       "HLC-001|0": {
-        "samples": 4,
-        "exactMatches": 3,
+        "samples": 5,
+        "exactMatches": 4,
         "mismatches": 0,
         "unexplained": 1
       },
       "BS-002|0": {
-        "samples": 29,
-        "exactMatches": 28,
+        "samples": 41,
+        "exactMatches": 39,
         "mismatches": 0,
-        "unexplained": 1
+        "unexplained": 2
       },
       "SLC-007|0": {
         "samples": 1,
@@ -3794,9 +3830,10 @@
         "mismatches": 0
       },
       "AMC-005|0": {
-        "samples": 1,
+        "samples": 3,
         "exactMatches": 1,
-        "mismatches": 0
+        "mismatches": 0,
+        "unexplained": 2
       },
       "SLC-009|0": {
         "samples": 3,
@@ -3805,11 +3842,21 @@
         "unexplained": 3
       },
       "SLC-A01|0": {
-        "samples": 3,
-        "exactMatches": 3,
+        "samples": 6,
+        "exactMatches": 6,
         "mismatches": 0
       },
       "SLC-005|0": {
+        "samples": 1,
+        "exactMatches": 1,
+        "mismatches": 0
+      },
+      "WAM-002|0": {
+        "samples": 2,
+        "exactMatches": 2,
+        "mismatches": 0
+      },
+      "HLC-011|0": {
         "samples": 1,
         "exactMatches": 1,
         "mismatches": 0
@@ -3827,7 +3874,7 @@
         "conflictLogged": true
       },
       "AMC-002": {
-        "samples": 40,
+        "samples": 50,
         "conflicts": 1,
         "conflictLogged": true
       },
@@ -3837,11 +3884,11 @@
         "conflictLogged": true
       },
       "AMC-003": {
-        "samples": 3,
+        "samples": 5,
         "conflicts": 0
       },
       "AMC-011": {
-        "samples": 15,
+        "samples": 18,
         "conflicts": 1,
         "conflictLogged": true
       },
@@ -3851,17 +3898,17 @@
         "conflictLogged": true
       },
       "SLC-001": {
-        "samples": 42,
+        "samples": 51,
         "conflicts": 1,
         "conflictLogged": true
       },
       "SLC-003": {
-        "samples": 11,
+        "samples": 12,
         "conflicts": 1,
         "conflictLogged": true
       },
       "SLC-014": {
-        "samples": 13,
+        "samples": 15,
         "conflicts": 1,
         "conflictLogged": true
       },
@@ -3876,7 +3923,7 @@
         "conflictLogged": true
       },
       "AMC-001": {
-        "samples": 41,
+        "samples": 51,
         "conflicts": 1,
         "conflictLogged": true
       },
@@ -3909,11 +3956,12 @@
         "conflictLogged": true
       },
       "SLC-011": {
-        "samples": 4,
-        "conflicts": 0
+        "samples": 7,
+        "conflicts": 1,
+        "conflictLogged": true
       },
       "SLC-A01": {
-        "samples": 6,
+        "samples": 13,
         "conflicts": 1,
         "conflictLogged": true
       },
@@ -3929,22 +3977,22 @@
     "decisions": {},
     "effects": {
       "AMC-008|skillDamage|transient": {
-        "samples": 10,
-        "exact": 5,
-        "mismatches": 5,
+        "samples": 13,
+        "exact": 7,
+        "mismatches": 6,
         "lastPredicted": 130,
         "lastObserved": 130,
         "transient": true,
-        "updatedAt": "2026-10-10T11:04:53.934Z"
+        "updatedAt": "2026-10-11T10:26:27.065Z"
       },
       "AMC-002|skillDamage|transient": {
-        "samples": 34,
-        "exact": 28,
-        "mismatches": 6,
+        "samples": 42,
+        "exact": 35,
+        "mismatches": 7,
         "lastPredicted": 100,
         "lastObserved": 100,
         "transient": true,
-        "updatedAt": "2026-10-10T12:21:03.732Z"
+        "updatedAt": "2026-10-11T10:27:46.735Z"
       },
       "HLC-A01|skillDamage|transient": {
         "samples": 2,
@@ -3956,103 +4004,103 @@
         "updatedAt": "2026-10-10T04:06:07.126Z"
       },
       "BS-007|skillDamage|no-other-brand:brand=Black AMATO": {
-        "samples": 42,
-        "exact": 42,
+        "samples": 51,
+        "exact": 51,
         "mismatches": 0,
         "lastPredicted": 20,
         "lastObserved": 20,
         "transient": false,
-        "updatedAt": "2026-10-10T12:15:27.326Z"
+        "updatedAt": "2026-10-11T10:38:56.670Z"
       },
       "CRA-001|skillDamage|transient": {
-        "samples": 30,
-        "exact": 28,
+        "samples": 37,
+        "exact": 35,
         "mismatches": 2,
         "lastPredicted": 80,
         "lastObserved": 80,
         "transient": true,
-        "updatedAt": "2026-10-10T11:42:30.860Z"
+        "updatedAt": "2026-10-11T10:19:55.545Z"
       },
       "BS-013|skillDamage|transient": {
-        "samples": 36,
-        "exact": 32,
+        "samples": 39,
+        "exact": 35,
         "mismatches": 4,
         "lastPredicted": 70,
         "lastObserved": 70,
         "transient": true,
-        "updatedAt": "2026-10-10T12:20:42.361Z"
+        "updatedAt": "2026-10-11T10:10:26.821Z"
       },
       "AMC-001|skillDamage|transient": {
-        "samples": 29,
-        "exact": 29,
+        "samples": 43,
+        "exact": 43,
         "mismatches": 0,
         "lastPredicted": 80,
         "lastObserved": 80,
         "transient": true,
-        "updatedAt": "2026-10-10T12:17:22.487Z"
+        "updatedAt": "2026-10-11T10:41:11.525Z"
       },
       "AMC-004|skillDamage|transient": {
-        "samples": 6,
-        "exact": 4,
-        "mismatches": 2,
+        "samples": 11,
+        "exact": 8,
+        "mismatches": 3,
         "lastPredicted": 130,
         "lastObserved": 150,
         "transient": true,
-        "updatedAt": "2026-10-10T10:47:28.126Z"
+        "updatedAt": "2026-10-11T10:27:02.547Z"
       },
       "WAM-005|skillDamage|transient": {
-        "samples": 14,
+        "samples": 17,
         "exact": 0,
-        "mismatches": 14,
+        "mismatches": 17,
         "lastPredicted": 30,
         "lastObserved": 20,
         "transient": true,
-        "updatedAt": "2026-10-10T12:26:18.033Z"
+        "updatedAt": "2026-10-11T10:35:59.155Z"
       },
       "AMC-003|skillDamage|transient": {
-        "samples": 3,
-        "exact": 0,
-        "mismatches": 3,
+        "samples": 8,
+        "exact": 2,
+        "mismatches": 6,
         "lastPredicted": 110,
         "lastObserved": 90,
         "transient": true,
-        "updatedAt": "2026-10-10T12:15:50.599Z"
+        "updatedAt": "2026-10-11T10:28:30.028Z"
       },
       "BS-001|skillDamage|transient": {
-        "samples": 32,
-        "exact": 31,
+        "samples": 36,
+        "exact": 35,
         "mismatches": 1,
         "lastPredicted": 70,
         "lastObserved": 70,
         "transient": true,
-        "updatedAt": "2026-10-10T12:23:17.980Z"
+        "updatedAt": "2026-10-11T10:33:43.761Z"
       },
       "SLC-012|skillDamage|transient": {
-        "samples": 21,
+        "samples": 24,
         "exact": 0,
-        "mismatches": 21,
+        "mismatches": 24,
         "lastPredicted": 70,
         "lastObserved": 50,
         "transient": true,
-        "updatedAt": "2026-10-10T12:21:37.218Z"
+        "updatedAt": "2026-10-11T10:24:58.917Z"
       },
       "CRA-002|skillDamage|transient": {
-        "samples": 31,
-        "exact": 28,
+        "samples": 35,
+        "exact": 32,
         "mismatches": 3,
         "lastPredicted": 100,
-        "lastObserved": 80,
+        "lastObserved": 100,
         "transient": true,
-        "updatedAt": "2026-10-10T12:23:40.045Z"
+        "updatedAt": "2026-10-11T10:40:48.325Z"
       },
       "SLC-013|skillDamage|transient": {
-        "samples": 11,
-        "exact": 9,
+        "samples": 16,
+        "exact": 14,
         "mismatches": 2,
         "lastPredicted": 40,
         "lastObserved": 40,
         "transient": true,
-        "updatedAt": "2026-10-10T12:13:28.348Z"
+        "updatedAt": "2026-10-11T10:39:51.404Z"
       },
       "AMC-010|skillDamage|transient": {
         "samples": 23,
@@ -4064,40 +4112,40 @@
         "updatedAt": "2026-10-10T12:19:36.619Z"
       },
       "AMC-011|skillDamage|transient": {
-        "samples": 7,
-        "exact": 7,
+        "samples": 9,
+        "exact": 9,
         "mismatches": 0,
         "lastPredicted": 70,
         "lastObserved": 70,
         "transient": true,
-        "updatedAt": "2026-10-10T11:59:10.880Z"
+        "updatedAt": "2026-10-11T10:20:40.192Z"
       },
       "BS-007|skillDamage|transient": {
-        "samples": 33,
-        "exact": 30,
-        "mismatches": 3,
+        "samples": 46,
+        "exact": 39,
+        "mismatches": 7,
         "lastPredicted": 90,
         "lastObserved": 90,
         "transient": true,
-        "updatedAt": "2026-10-10T12:15:38.852Z"
+        "updatedAt": "2026-10-11T10:40:02.274Z"
       },
       "HLC-F02|skillDamage|transient": {
-        "samples": 35,
-        "exact": 18,
-        "mismatches": 17,
+        "samples": 39,
+        "exact": 19,
+        "mismatches": 20,
         "lastPredicted": 50,
-        "lastObserved": 30,
+        "lastObserved": 10,
         "transient": true,
-        "updatedAt": "2026-10-10T12:17:11.727Z"
+        "updatedAt": "2026-10-11T10:04:09.625Z"
       },
       "SLC-002|skillDamage|transient": {
-        "samples": 18,
+        "samples": 22,
         "exact": 0,
-        "mismatches": 18,
+        "mismatches": 22,
         "lastPredicted": 70,
         "lastObserved": 50,
         "transient": true,
-        "updatedAt": "2026-10-10T12:07:45.523Z"
+        "updatedAt": "2026-10-11T10:33:54.863Z"
       },
       "SLC-004|skillDamage|transient": {
         "samples": 5,
@@ -4118,49 +4166,49 @@
         "updatedAt": "2026-10-10T03:30:45.851Z"
       },
       "AMC-009|skillDamage|base": {
-        "samples": 4,
+        "samples": 5,
         "exact": 0,
-        "mismatches": 4,
+        "mismatches": 5,
         "lastPredicted": 0,
         "lastObserved": 20,
         "transient": false,
-        "updatedAt": "2026-10-10T11:38:43.678Z"
+        "updatedAt": "2026-10-11T10:29:36.033Z"
       },
       "AMC-009|skillDamage|transient": {
-        "samples": 5,
-        "exact": 3,
+        "samples": 6,
+        "exact": 4,
         "mismatches": 2,
         "lastPredicted": 140,
         "lastObserved": 140,
         "transient": true,
-        "updatedAt": "2026-10-10T11:38:43.678Z"
+        "updatedAt": "2026-10-11T10:29:36.033Z"
       },
       "WAM-001|skillDamage|transient": {
-        "samples": 18,
-        "exact": 15,
+        "samples": 20,
+        "exact": 17,
         "mismatches": 3,
         "lastPredicted": 40,
-        "lastObserved": 20,
+        "lastObserved": 40,
         "transient": true,
-        "updatedAt": "2026-10-10T11:31:27.113Z"
+        "updatedAt": "2026-10-11T10:15:21.195Z"
       },
       "SLC-014|skillDamage|transient": {
-        "samples": 16,
-        "exact": 14,
+        "samples": 20,
+        "exact": 18,
         "mismatches": 2,
         "lastPredicted": 20,
         "lastObserved": 20,
         "transient": true,
-        "updatedAt": "2026-10-10T12:25:54.314Z"
+        "updatedAt": "2026-10-11T10:38:00.731Z"
       },
       "SLC-015|skillDamage|transient": {
-        "samples": 2,
+        "samples": 5,
         "exact": 0,
-        "mismatches": 2,
+        "mismatches": 5,
         "lastPredicted": 70,
         "lastObserved": 50,
         "transient": true,
-        "updatedAt": "2026-10-10T03:44:44.871Z"
+        "updatedAt": "2026-10-11T10:15:54.179Z"
       },
       "SLC-001|skillDamage|transient": {
         "samples": 14,
@@ -4172,13 +4220,13 @@
         "updatedAt": "2026-10-10T12:05:27.545Z"
       },
       "SLC-011|skillDamage|transient": {
-        "samples": 16,
-        "exact": 11,
+        "samples": 18,
+        "exact": 13,
         "mismatches": 5,
         "lastPredicted": 20,
-        "lastObserved": 0,
+        "lastObserved": 20,
         "transient": true,
-        "updatedAt": "2026-10-10T11:47:31.043Z"
+        "updatedAt": "2026-10-11T09:57:45.006Z"
       },
       "HLC-003|hp|base": {
         "samples": 2,
@@ -4190,40 +4238,40 @@
         "updatedAt": "2026-10-10T10:06:37.702Z"
       },
       "HLC-003|skillDamage|transient": {
-        "samples": 6,
-        "exact": 4,
+        "samples": 8,
+        "exact": 6,
         "mismatches": 2,
         "lastPredicted": 50,
-        "lastObserved": 70,
+        "lastObserved": 50,
         "transient": true,
-        "updatedAt": "2026-10-10T11:54:38.949Z"
+        "updatedAt": "2026-10-11T10:24:03.394Z"
       },
       "SLC-003|skillDamage|transient": {
-        "samples": 17,
-        "exact": 13,
+        "samples": 19,
+        "exact": 15,
         "mismatches": 4,
         "lastPredicted": 40,
         "lastObserved": 40,
         "transient": true,
-        "updatedAt": "2026-10-10T12:27:16.460Z"
+        "updatedAt": "2026-10-11T10:19:10.998Z"
       },
       "HLC-001|skillDamage|transient": {
-        "samples": 4,
-        "exact": 3,
+        "samples": 5,
+        "exact": 4,
         "mismatches": 1,
         "lastPredicted": 50,
-        "lastObserved": 70,
+        "lastObserved": 50,
         "transient": true,
-        "updatedAt": "2026-10-10T04:48:37.425Z"
+        "updatedAt": "2026-10-11T10:24:03.395Z"
       },
       "BS-002|skillDamage|transient": {
-        "samples": 29,
+        "samples": 41,
         "exact": 0,
-        "mismatches": 29,
+        "mismatches": 41,
         "lastPredicted": 100,
         "lastObserved": 80,
         "transient": true,
-        "updatedAt": "2026-10-10T12:27:50.116Z"
+        "updatedAt": "2026-10-11T10:32:34.088Z"
       },
       "SLC-007|skillDamage|transient": {
         "samples": 1,
@@ -4307,13 +4355,13 @@
         "updatedAt": "2026-10-10T09:56:53.010Z"
       },
       "AMC-005|skillDamage|transient": {
-        "samples": 2,
-        "exact": 2,
-        "mismatches": 0,
+        "samples": 5,
+        "exact": 3,
+        "mismatches": 2,
         "lastPredicted": 120,
-        "lastObserved": 120,
+        "lastObserved": 100,
         "transient": true,
-        "updatedAt": "2026-10-10T10:00:56.028Z"
+        "updatedAt": "2026-10-11T10:07:05.716Z"
       },
       "SLC-009|skillDamage|transient": {
         "samples": 3,
@@ -4325,13 +4373,13 @@
         "updatedAt": "2026-10-10T10:53:48.269Z"
       },
       "SLC-A01|skillDamage|transient": {
-        "samples": 3,
-        "exact": 3,
+        "samples": 6,
+        "exact": 6,
         "mismatches": 0,
         "lastPredicted": 40,
         "lastObserved": 40,
         "transient": true,
-        "updatedAt": "2026-10-10T12:08:52.025Z"
+        "updatedAt": "2026-10-11T10:15:54.179Z"
       },
       "SLC-005|skillDamage|transient": {
         "samples": 1,
@@ -4341,1243 +4389,37 @@
         "lastObserved": 60,
         "transient": true,
         "updatedAt": "2026-10-10T11:43:46.910Z"
+      },
+      "WAM-002|hp|our-wall-fewer": {
+        "samples": 2,
+        "exact": 2,
+        "mismatches": 0,
+        "lastPredicted": 20,
+        "lastObserved": 20,
+        "transient": false,
+        "updatedAt": "2026-10-11T10:37:47.292Z"
+      },
+      "WAM-002|skillDamage|transient": {
+        "samples": 2,
+        "exact": 2,
+        "mismatches": 0,
+        "lastPredicted": 20,
+        "lastObserved": 20,
+        "transient": true,
+        "updatedAt": "2026-10-11T10:27:35.960Z"
+      },
+      "HLC-011|skillDamage|transient": {
+        "samples": 1,
+        "exact": 1,
+        "mismatches": 0,
+        "lastPredicted": 30,
+        "lastObserved": 30,
+        "transient": true,
+        "updatedAt": "2026-10-11T10:23:18.925Z"
       }
     }
   },
   "effectCalibrationLog": [
-    {
-      "at": "2026-10-10T10:39:23.925Z",
-      "card": "SLC-011",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 20,
-      "observed": 20,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T10:39:35.211Z",
-      "card": "AMC-010",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 120,
-      "observed": 120,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T10:40:24.859Z",
-      "card": "HLC-F02",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 50,
-      "observed": 30,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T10:40:36.273Z",
-      "card": "AMC-010",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 120,
-      "observed": 100,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T10:43:01.945Z",
-      "card": "BS-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 70,
-      "observed": 70,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T10:43:12.892Z",
-      "card": "AMC-010",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 120,
-      "observed": 100,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T10:43:46.304Z",
-      "card": "AMC-010",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 120,
-      "observed": 120,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T10:44:21.691Z",
-      "card": "CRA-002",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 100,
-      "observed": 100,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T10:44:44.315Z",
-      "card": "CRA-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 80,
-      "observed": 80,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T10:44:55.355Z",
-      "card": "SLC-002",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 70,
-      "observed": 50,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T10:44:55.355Z",
-      "card": "SLC-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 40,
-      "observed": 40,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T10:45:28.618Z",
-      "card": "BS-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 70,
-      "observed": 70,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T10:46:54.595Z",
-      "card": "AMC-009",
-      "stat": "skillDamage",
-      "key": "base",
-      "predicted": 0,
-      "observed": 20,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T10:46:54.595Z",
-      "card": "AMC-009",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 140,
-      "observed": 120,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T10:46:54.595Z",
-      "card": "SLC-009",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 100,
-      "observed": 70,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T10:47:28.126Z",
-      "card": "AMC-004",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 20,
-      "observed": 20,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T10:47:28.126Z",
-      "card": "AMC-004",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 130,
-      "observed": 150,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T10:47:28.126Z",
-      "card": "SLC-009",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 100,
-      "observed": 70,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T10:48:01.337Z",
-      "card": "CRA-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 80,
-      "observed": 80,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T10:48:11.892Z",
-      "card": "AMC-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 80,
-      "observed": 80,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T10:48:44.142Z",
-      "card": "BS-013",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 70,
-      "observed": 70,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T10:49:05.619Z",
-      "card": "WAM-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 40,
-      "observed": 40,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T10:49:16.397Z",
-      "card": "AMC-002",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 100,
-      "observed": 100,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T10:49:49.985Z",
-      "card": "HLC-F02",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 50,
-      "observed": 30,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T10:51:37.697Z",
-      "card": "BS-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 70,
-      "observed": 70,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T10:53:15.716Z",
-      "card": "AMC-010",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 120,
-      "observed": 120,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T10:53:48.269Z",
-      "card": "AMC-010",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 120,
-      "observed": 100,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T10:53:48.269Z",
-      "card": "SLC-009",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 100,
-      "observed": 70,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T10:54:47.449Z",
-      "card": "CRA-002",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 100,
-      "observed": 100,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T10:54:59.159Z",
-      "card": "WAM-005",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 30,
-      "observed": 20,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T10:55:10.310Z",
-      "card": "AMC-010",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 120,
-      "observed": 120,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T10:55:43.393Z",
-      "card": "SLC-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 40,
-      "observed": 40,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T10:57:26.316Z",
-      "card": "BS-013",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 70,
-      "observed": 70,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T10:58:33.995Z",
-      "card": "CRA-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 80,
-      "observed": 80,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T10:59:19.178Z",
-      "card": "BS-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 70,
-      "observed": 70,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:00:04.555Z",
-      "card": "WAM-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 40,
-      "observed": 40,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:00:49.810Z",
-      "card": "SLC-011",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 20,
-      "observed": 20,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:01:36.551Z",
-      "card": "SLC-013",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 40,
-      "observed": 40,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:02:21.019Z",
-      "card": "AMC-002",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 100,
-      "observed": 100,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:02:53.439Z",
-      "card": "CRA-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 80,
-      "observed": 80,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:03:14.762Z",
-      "card": "BS-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 70,
-      "observed": 70,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:03:58.329Z",
-      "card": "CRA-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 80,
-      "observed": 80,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:04:09.042Z",
-      "card": "AMC-010",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 120,
-      "observed": 120,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:04:53.934Z",
-      "card": "AMC-010",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 120,
-      "observed": 120,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:04:53.934Z",
-      "card": "AMC-008",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 130,
-      "observed": 130,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:05:27.295Z",
-      "card": "CRA-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 80,
-      "observed": 80,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:05:37.982Z",
-      "card": "AMC-002",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 100,
-      "observed": 100,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:06:45.490Z",
-      "card": "CRA-002",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 100,
-      "observed": 100,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:06:56.333Z",
-      "card": "AMC-002",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 100,
-      "observed": 100,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:07:29.429Z",
-      "card": "BS-002",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 100,
-      "observed": 80,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:07:40.218Z",
-      "card": "SLC-012",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 70,
-      "observed": 50,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:08:50.573Z",
-      "card": "WAM-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 40,
-      "observed": 40,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:09:40.161Z",
-      "card": "BS-013",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 70,
-      "observed": 70,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:09:40.162Z",
-      "card": "BS-007",
-      "stat": "skillDamage",
-      "key": "no-other-brand:brand=Black AMATO",
-      "predicted": 20,
-      "observed": 20,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:09:52.528Z",
-      "card": "BS-007",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 90,
-      "observed": 90,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:10:15.643Z",
-      "card": "AMC-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 80,
-      "observed": 80,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:10:48.495Z",
-      "card": "HLC-F02",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 50,
-      "observed": 30,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:11:09.903Z",
-      "card": "AMC-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 80,
-      "observed": 80,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:11:09.903Z",
-      "card": "SLC-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 40,
-      "observed": 40,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:11:43.861Z",
-      "card": "BS-007",
-      "stat": "skillDamage",
-      "key": "no-other-brand:brand=Black AMATO",
-      "predicted": 20,
-      "observed": 20,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:11:55.068Z",
-      "card": "BS-007",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 90,
-      "observed": 90,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:12:16.775Z",
-      "card": "CRA-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 80,
-      "observed": 80,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:12:27.555Z",
-      "card": "SLC-002",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 70,
-      "observed": 50,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:13:22.502Z",
-      "card": "BS-007",
-      "stat": "skillDamage",
-      "key": "no-other-brand:brand=Black AMATO",
-      "predicted": 20,
-      "observed": 20,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:15:33.235Z",
-      "card": "CRA-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 80,
-      "observed": 80,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:16:07.218Z",
-      "card": "SLC-003",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 40,
-      "observed": 40,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:16:18.345Z",
-      "card": "BS-007",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 90,
-      "observed": 90,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:16:28.966Z",
-      "card": "AMC-010",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 120,
-      "observed": 120,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:16:28.966Z",
-      "card": "SLC-011",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 20,
-      "observed": 20,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:17:26.317Z",
-      "card": "SLC-011",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 20,
-      "observed": 20,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:17:37.426Z",
-      "card": "AMC-010",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 120,
-      "observed": 120,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:18:13.289Z",
-      "card": "CRA-002",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 100,
-      "observed": 100,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:18:36.429Z",
-      "card": "HLC-F02",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 50,
-      "observed": 50,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:18:47.518Z",
-      "card": "AMC-010",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 120,
-      "observed": 120,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:19:53.869Z",
-      "card": "HLC-002",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 30,
-      "observed": 50,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:21:01.262Z",
-      "card": "WAM-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 40,
-      "observed": 40,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:22:11.739Z",
-      "card": "BS-013",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 70,
-      "observed": 70,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:22:11.739Z",
-      "card": "BS-007",
-      "stat": "skillDamage",
-      "key": "no-other-brand:brand=Black AMATO",
-      "predicted": 20,
-      "observed": 20,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:22:59.347Z",
-      "card": "SLC-011",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 20,
-      "observed": 20,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:23:47.556Z",
-      "card": "SLC-013",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 40,
-      "observed": 40,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:24:59.010Z",
-      "card": "BS-013",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 70,
-      "observed": 70,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:24:59.010Z",
-      "card": "BS-007",
-      "stat": "skillDamage",
-      "key": "no-other-brand:brand=Black AMATO",
-      "predicted": 20,
-      "observed": 20,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:25:43.744Z",
-      "card": "CRA-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 80,
-      "observed": 80,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:25:54.291Z",
-      "card": "AMC-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 80,
-      "observed": 80,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:26:31.163Z",
-      "card": "BS-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 70,
-      "observed": 70,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:26:52.661Z",
-      "card": "BS-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 70,
-      "observed": 70,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:27:03.315Z",
-      "card": "AMC-002",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 100,
-      "observed": 100,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:27:25.474Z",
-      "card": "BS-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 70,
-      "observed": 70,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:27:48.746Z",
-      "card": "SLC-A01",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 40,
-      "observed": 40,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:28:10.352Z",
-      "card": "BS-007",
-      "stat": "skillDamage",
-      "key": "no-other-brand:brand=Black AMATO",
-      "predicted": 20,
-      "observed": 20,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:28:21.126Z",
-      "card": "BS-007",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 90,
-      "observed": 90,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:29:27.489Z",
-      "card": "BS-007",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 90,
-      "observed": 90,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:30:39.301Z",
-      "card": "SLC-003",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 40,
-      "observed": 20,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:31:27.113Z",
-      "card": "WAM-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 40,
-      "observed": 20,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:32:38.856Z",
-      "card": "SLC-013",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 40,
-      "observed": 20,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:33:26.865Z",
-      "card": "BS-013",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 70,
-      "observed": 50,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:33:26.865Z",
-      "card": "BS-007",
-      "stat": "skillDamage",
-      "key": "no-other-brand:brand=Black AMATO",
-      "predicted": 20,
-      "observed": 20,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:34:02.949Z",
-      "card": "HLC-F02",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 50,
-      "observed": 30,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:34:13.791Z",
-      "card": "AMC-002",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 100,
-      "observed": 100,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:34:13.791Z",
-      "card": "SLC-002",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 70,
-      "observed": 50,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:34:36.554Z",
-      "card": "BS-007",
-      "stat": "skillDamage",
-      "key": "no-other-brand:brand=Black AMATO",
-      "predicted": 20,
-      "observed": 20,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:34:47.700Z",
-      "card": "BS-007",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 90,
-      "observed": 90,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:34:58.802Z",
-      "card": "AMC-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 80,
-      "observed": 80,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:34:58.802Z",
-      "card": "SLC-002",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 70,
-      "observed": 50,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:35:32.263Z",
-      "card": "AMC-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 80,
-      "observed": 80,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:36:04.568Z",
-      "card": "CRA-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 80,
-      "observed": 80,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:36:25.845Z",
-      "card": "WAM-005",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 30,
-      "observed": 20,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:36:36.410Z",
-      "card": "SLC-003",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 40,
-      "observed": 40,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:37:08.939Z",
-      "card": "AMC-002",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 80,
-      "observed": 100,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:37:33.390Z",
-      "card": "BS-007",
-      "stat": "skillDamage",
-      "key": "no-other-brand:brand=Black AMATO",
-      "predicted": 20,
-      "observed": 20,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:37:45.571Z",
-      "card": "SLC-012",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 70,
-      "observed": 50,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:38:32.377Z",
-      "card": "SLC-003",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 40,
-      "observed": 20,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:38:43.678Z",
-      "card": "AMC-009",
-      "stat": "skillDamage",
-      "key": "base",
-      "predicted": 0,
-      "observed": 20,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:38:43.678Z",
-      "card": "AMC-009",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 140,
-      "observed": 140,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:39:18.052Z",
-      "card": "CRA-002",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 100,
-      "observed": 100,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:39:28.718Z",
-      "card": "AMC-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 80,
-      "observed": 80,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:40:01.344Z",
-      "card": "BS-002",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 100,
-      "observed": 80,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:40:58.585Z",
-      "card": "AMC-010",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 120,
-      "observed": 120,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:41:34.174Z",
-      "card": "BS-002",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 100,
-      "observed": 80,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:41:45.332Z",
-      "card": "BS-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 70,
-      "observed": 50,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:41:56.509Z",
-      "card": "SLC-004",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 100,
-      "observed": 80,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:41:56.509Z",
-      "card": "SLC-008",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 80,
-      "observed": 80,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:42:30.860Z",
-      "card": "CRA-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 80,
-      "observed": 80,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:43:46.910Z",
-      "card": "SLC-005",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 60,
-      "observed": 60,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:44:45.989Z",
-      "card": "WAM-005",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 30,
-      "observed": 0,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:45:35.957Z",
-      "card": "SLC-014",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 20,
-      "observed": 0,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:46:13.592Z",
-      "card": "BS-007",
-      "stat": "skillDamage",
-      "key": "no-other-brand:brand=Black AMATO",
-      "predicted": 20,
-      "observed": 20,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:46:28.216Z",
-      "card": "HLC-F02",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 50,
-      "observed": 30,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:46:39.838Z",
-      "card": "SLC-002",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 70,
-      "observed": 50,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:47:31.043Z",
-      "card": "SLC-011",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 20,
-      "observed": 0,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:48:45.469Z",
-      "card": "BS-013",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 70,
-      "observed": 50,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:50:03.623Z",
-      "card": "HLC-003",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 50,
-      "observed": 50,
-      "side": "opponent"
-    },
-    {
-      "at": "2026-10-10T11:51:57.438Z",
-      "card": "SLC-014",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 20,
-      "observed": 20,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:52:45.827Z",
-      "card": "CRA-002",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 100,
-      "observed": 100,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:52:57.316Z",
-      "card": "BS-001",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 70,
-      "observed": 70,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:53:42.365Z",
-      "card": "BS-013",
-      "stat": "skillDamage",
-      "key": "transient",
-      "predicted": 70,
-      "observed": 70,
-      "side": "player"
-    },
-    {
-      "at": "2026-10-10T11:54:16.117Z",
-      "card": "BS-007",
-      "stat": "skillDamage",
-      "key": "no-other-brand:brand=Black AMATO",
-      "predicted": 20,
-      "observed": 20,
-      "side": "player"
-    },
     {
       "at": "2026-10-10T11:54:28.016Z",
       "card": "SLC-003",
@@ -6144,14 +4986,1247 @@
       "predicted": 100,
       "observed": 80,
       "side": "player"
+    },
+    {
+      "at": "2026-10-11T09:42:53.813Z",
+      "card": "AMC-003",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 90,
+      "observed": 90,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T09:42:53.813Z",
+      "card": "SLC-014",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 20,
+      "observed": 20,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T09:43:27.718Z",
+      "card": "BS-002",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 100,
+      "observed": 80,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T09:43:38.678Z",
+      "card": "AMC-003",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 110,
+      "observed": 90,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T09:43:38.678Z",
+      "card": "SLC-002",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 70,
+      "observed": 50,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T09:44:45.495Z",
+      "card": "CRA-002",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 100,
+      "observed": 100,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T09:44:56.458Z",
+      "card": "HLC-F02",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 30,
+      "observed": 30,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T09:45:07.117Z",
+      "card": "AMC-001",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 80,
+      "observed": 80,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T09:45:30.111Z",
+      "card": "BS-007",
+      "stat": "skillDamage",
+      "key": "no-other-brand:brand=Black AMATO",
+      "predicted": 20,
+      "observed": 20,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T09:45:41.456Z",
+      "card": "HLC-F02",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 50,
+      "observed": 30,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T09:45:52.306Z",
+      "card": "BS-007",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 90,
+      "observed": 90,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T09:46:27.050Z",
+      "card": "BS-007",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 90,
+      "observed": 90,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T09:46:51.266Z",
+      "card": "BS-001",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 70,
+      "observed": 70,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T09:47:41.323Z",
+      "card": "BS-001",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 70,
+      "observed": 70,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T09:47:52.268Z",
+      "card": "BS-002",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 100,
+      "observed": 80,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T09:48:25.819Z",
+      "card": "BS-002",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 100,
+      "observed": 80,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T09:48:48.987Z",
+      "card": "AMC-002",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 100,
+      "observed": 100,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T09:49:21.692Z",
+      "card": "CRA-001",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 80,
+      "observed": 80,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T09:49:43.131Z",
+      "card": "WAM-005",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 30,
+      "observed": 20,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T09:49:53.779Z",
+      "card": "AMC-003",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 110,
+      "observed": 90,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T09:50:38.442Z",
+      "card": "AMC-003",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 110,
+      "observed": 110,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T09:51:14.443Z",
+      "card": "CRA-002",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 100,
+      "observed": 100,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T09:51:26.060Z",
+      "card": "WAM-005",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 30,
+      "observed": 0,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T09:51:37.322Z",
+      "card": "AMC-008",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 130,
+      "observed": 130,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T09:52:11.688Z",
+      "card": "CRA-001",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 80,
+      "observed": 80,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T09:52:22.463Z",
+      "card": "AMC-002",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 100,
+      "observed": 100,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T09:52:55.312Z",
+      "card": "SLC-012",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 70,
+      "observed": 50,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T09:53:40.423Z",
+      "card": "SLC-012",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 70,
+      "observed": 50,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T09:53:52.067Z",
+      "card": "SLC-003",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 40,
+      "observed": 40,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T09:54:14.956Z",
+      "card": "AMC-011",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 70,
+      "observed": 70,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T09:54:47.087Z",
+      "card": "BS-002",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 100,
+      "observed": 80,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T09:55:30.618Z",
+      "card": "BS-002",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 100,
+      "observed": 80,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T09:55:41.658Z",
+      "card": "BS-013",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 70,
+      "observed": 70,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T09:56:04.014Z",
+      "card": "WAM-001",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 40,
+      "observed": 40,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T09:56:27.395Z",
+      "card": "AMC-001",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 80,
+      "observed": 80,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T09:56:27.395Z",
+      "card": "SLC-011",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 20,
+      "observed": 20,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T09:57:00.936Z",
+      "card": "BS-002",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 100,
+      "observed": 80,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T09:57:11.894Z",
+      "card": "AMC-001",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 80,
+      "observed": 80,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T09:57:11.894Z",
+      "card": "SLC-013",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 40,
+      "observed": 40,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T09:57:45.006Z",
+      "card": "SLC-A01",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 40,
+      "observed": 40,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T09:57:45.006Z",
+      "card": "SLC-011",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 20,
+      "observed": 20,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T09:58:07.642Z",
+      "card": "WAM-002",
+      "stat": "hp",
+      "key": "our-wall-fewer",
+      "predicted": 20,
+      "observed": 20,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T09:58:29.882Z",
+      "card": "CRA-001",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 80,
+      "observed": 80,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T09:59:02.877Z",
+      "card": "BS-007",
+      "stat": "skillDamage",
+      "key": "no-other-brand:brand=Black AMATO",
+      "predicted": 20,
+      "observed": 20,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:00:12.347Z",
+      "card": "WAM-002",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 20,
+      "observed": 20,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:00:35.066Z",
+      "card": "BS-002",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 100,
+      "observed": 80,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:01:09.916Z",
+      "card": "BS-007",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 70,
+      "observed": 50,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:01:21.025Z",
+      "card": "BS-002",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 100,
+      "observed": 60,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:01:21.026Z",
+      "card": "BS-007",
+      "stat": "skillDamage",
+      "key": "no-other-brand:brand=Black AMATO",
+      "predicted": 20,
+      "observed": 20,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:01:31.947Z",
+      "card": "BS-007",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 90,
+      "observed": 70,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:01:42.684Z",
+      "card": "SLC-A01",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 40,
+      "observed": 40,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:03:24.809Z",
+      "card": "HLC-F02",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 50,
+      "observed": 10,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:04:09.625Z",
+      "card": "HLC-F02",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 50,
+      "observed": 10,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:04:53.960Z",
+      "card": "AMC-001",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 80,
+      "observed": 80,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:05:26.417Z",
+      "card": "BS-013",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 70,
+      "observed": 70,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:05:37.027Z",
+      "card": "AMC-002",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 100,
+      "observed": 100,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:06:09.730Z",
+      "card": "SLC-013",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 40,
+      "observed": 40,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:06:20.427Z",
+      "card": "AMC-005",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 20,
+      "observed": 20,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:06:20.427Z",
+      "card": "AMC-005",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 120,
+      "observed": 140,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:07:05.716Z",
+      "card": "AMC-005",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 120,
+      "observed": 100,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:08:00.607Z",
+      "card": "BS-007",
+      "stat": "skillDamage",
+      "key": "no-other-brand:brand=Black AMATO",
+      "predicted": 20,
+      "observed": 20,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:08:11.498Z",
+      "card": "CRA-001",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 80,
+      "observed": 80,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:08:22.333Z",
+      "card": "BS-007",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 90,
+      "observed": 90,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:08:33.028Z",
+      "card": "AMC-002",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 100,
+      "observed": 100,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:09:07.725Z",
+      "card": "BS-007",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 90,
+      "observed": 70,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:09:19.539Z",
+      "card": "BS-007",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 90,
+      "observed": 70,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:09:43.809Z",
+      "card": "CRA-001",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 80,
+      "observed": 80,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:09:54.447Z",
+      "card": "AMC-001",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 80,
+      "observed": 80,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:10:26.821Z",
+      "card": "BS-013",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 70,
+      "observed": 70,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:10:37.505Z",
+      "card": "AMC-001",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 80,
+      "observed": 80,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:12:05.929Z",
+      "card": "AMC-004",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 20,
+      "observed": 20,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:12:05.930Z",
+      "card": "AMC-004",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 130,
+      "observed": 130,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:12:55.623Z",
+      "card": "SLC-014",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 20,
+      "observed": 20,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:13:07.145Z",
+      "card": "AMC-004",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 130,
+      "observed": 130,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:14:12.525Z",
+      "card": "SLC-015",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 70,
+      "observed": 50,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:15:21.195Z",
+      "card": "WAM-001",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 40,
+      "observed": 40,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:15:32.265Z",
+      "card": "SLC-015",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 70,
+      "observed": 50,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:15:54.179Z",
+      "card": "SLC-015",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 70,
+      "observed": 50,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:15:54.179Z",
+      "card": "SLC-A01",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 40,
+      "observed": 40,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:17:08.634Z",
+      "card": "CRA-001",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 80,
+      "observed": 80,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:17:19.441Z",
+      "card": "BS-002",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 100,
+      "observed": 80,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:17:30.077Z",
+      "card": "AMC-001",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 80,
+      "observed": 80,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:18:03.676Z",
+      "card": "BS-002",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 100,
+      "observed": 80,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:18:15.161Z",
+      "card": "SLC-013",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 40,
+      "observed": 40,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:18:38.341Z",
+      "card": "AMC-001",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 80,
+      "observed": 80,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:19:10.998Z",
+      "card": "SLC-003",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 40,
+      "observed": 40,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:19:21.678Z",
+      "card": "AMC-002",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 80,
+      "observed": 100,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:19:21.678Z",
+      "card": "AMC-001",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 80,
+      "observed": 80,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:19:55.545Z",
+      "card": "CRA-001",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 80,
+      "observed": 80,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:20:17.524Z",
+      "card": "AMC-001",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 80,
+      "observed": 80,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:20:40.192Z",
+      "card": "AMC-011",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 70,
+      "observed": 70,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:21:13.295Z",
+      "card": "BS-002",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 100,
+      "observed": 80,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:21:24.512Z",
+      "card": "AMC-002",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 100,
+      "observed": 100,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:21:58.212Z",
+      "card": "BS-001",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 70,
+      "observed": 70,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:22:20.363Z",
+      "card": "BS-007",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 70,
+      "observed": 70,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:22:31.033Z",
+      "card": "BS-007",
+      "stat": "skillDamage",
+      "key": "no-other-brand:brand=Black AMATO",
+      "predicted": 20,
+      "observed": 20,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:22:31.034Z",
+      "card": "AMC-001",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 80,
+      "observed": 80,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:22:54.803Z",
+      "card": "BS-007",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 90,
+      "observed": 90,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:23:18.925Z",
+      "card": "HLC-003",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 50,
+      "observed": 50,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:23:18.925Z",
+      "card": "HLC-011",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 30,
+      "observed": 30,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:24:03.394Z",
+      "card": "HLC-003",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 50,
+      "observed": 50,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:24:03.395Z",
+      "card": "HLC-001",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 50,
+      "observed": 50,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:24:26.007Z",
+      "card": "AMC-002",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 100,
+      "observed": 100,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:24:58.917Z",
+      "card": "SLC-012",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 70,
+      "observed": 50,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:25:42.556Z",
+      "card": "AMC-008",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 130,
+      "observed": 110,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:26:16.063Z",
+      "card": "CRA-002",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 100,
+      "observed": 100,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:26:27.065Z",
+      "card": "AMC-008",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 130,
+      "observed": 130,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:26:50.964Z",
+      "card": "BS-007",
+      "stat": "skillDamage",
+      "key": "no-other-brand:brand=Black AMATO",
+      "predicted": 20,
+      "observed": 20,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:27:02.547Z",
+      "card": "AMC-004",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 20,
+      "observed": 20,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:27:02.547Z",
+      "card": "AMC-004",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 130,
+      "observed": 150,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:27:35.960Z",
+      "card": "WAM-002",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 20,
+      "observed": 20,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:27:46.735Z",
+      "card": "AMC-002",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 100,
+      "observed": 100,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:28:08.301Z",
+      "card": "BS-007",
+      "stat": "skillDamage",
+      "key": "no-other-brand:brand=Black AMATO",
+      "predicted": 20,
+      "observed": 20,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:28:19.146Z",
+      "card": "BS-007",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 90,
+      "observed": 90,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:28:30.028Z",
+      "card": "AMC-003",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 110,
+      "observed": 90,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:28:52.216Z",
+      "card": "BS-007",
+      "stat": "skillDamage",
+      "key": "no-other-brand:brand=Black AMATO",
+      "predicted": 20,
+      "observed": 20,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:29:03.020Z",
+      "card": "BS-007",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 90,
+      "observed": 90,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:29:36.033Z",
+      "card": "AMC-009",
+      "stat": "skillDamage",
+      "key": "base",
+      "predicted": 0,
+      "observed": 20,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:29:36.033Z",
+      "card": "AMC-009",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 140,
+      "observed": 140,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:29:36.034Z",
+      "card": "SLC-013",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 40,
+      "observed": 40,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:31:15.819Z",
+      "card": "SLC-002",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 70,
+      "observed": 50,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:31:49.610Z",
+      "card": "SLC-002",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 70,
+      "observed": 50,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:32:34.088Z",
+      "card": "BS-002",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 100,
+      "observed": 80,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:33:43.761Z",
+      "card": "BS-001",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 70,
+      "observed": 70,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:33:54.863Z",
+      "card": "SLC-002",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 70,
+      "observed": 50,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:35:59.155Z",
+      "card": "WAM-005",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 30,
+      "observed": 20,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:37:12.493Z",
+      "card": "SLC-014",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 20,
+      "observed": 20,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:37:47.292Z",
+      "card": "WAM-002",
+      "stat": "hp",
+      "key": "our-wall-fewer",
+      "predicted": 20,
+      "observed": 20,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:38:00.731Z",
+      "card": "SLC-014",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 20,
+      "observed": 20,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:38:34.563Z",
+      "card": "AMC-001",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 80,
+      "observed": 80,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:38:56.670Z",
+      "card": "BS-007",
+      "stat": "skillDamage",
+      "key": "no-other-brand:brand=Black AMATO",
+      "predicted": 20,
+      "observed": 20,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:39:07.463Z",
+      "card": "BS-007",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 90,
+      "observed": 90,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:39:51.404Z",
+      "card": "SLC-013",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 40,
+      "observed": 40,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:40:02.274Z",
+      "card": "BS-007",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 90,
+      "observed": 90,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:40:13.231Z",
+      "card": "AMC-001",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 80,
+      "observed": 80,
+      "side": "opponent"
+    },
+    {
+      "at": "2026-10-11T10:40:48.325Z",
+      "card": "CRA-002",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 100,
+      "observed": 100,
+      "side": "player"
+    },
+    {
+      "at": "2026-10-11T10:41:11.525Z",
+      "card": "AMC-001",
+      "stat": "skillDamage",
+      "key": "transient",
+      "predicted": 80,
+      "observed": 80,
+      "side": "opponent"
     }
   ],
   "stats": {
-    "observations": 4689,
-    "matches": 80,
-    "actions": 1671,
-    "finishingAttacks": 57,
-    "fieldAttacksFailed": 147,
+    "observations": 5655,
+    "matches": 101,
+    "actions": 1983,
+    "finishingAttacks": 75,
+    "fieldAttacksFailed": 165,
     "failedAttackDamage": {
       "HLC-012": 70,
       "SLC-012": 90,
